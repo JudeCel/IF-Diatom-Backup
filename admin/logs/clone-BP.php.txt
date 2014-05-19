@@ -1,0 +1,12 @@
+---------19-12-2012 15:21:54---------
+INSERT INTO brand_projects (name, moderator_user_id, max_sessions, start_date, end_date,session_replay_date, created) VALUES ('Copy Of Test', , 10,'2012-09-15','2012-09-15','2012-12-14','2012-12-19 15:21:54')---------
+
+
+---------19-12-2012 15:31:08---------
+INSERT INTO brand_projects (name, moderator_user_id, max_sessions, start_date, end_date,session_replay_date, created) VALUES ('Copy Of Test', , 10,'2012-09-15','2012-09-15','2012-12-14','2012-12-19 15:31:08')---------
+
+
+---------19-12-2012 15:32:19---------
+INSERT INTO brand_projects (name, moderator_user_id, max_sessions, start_date, end_date,session_replay_date, created) VALUES ('Copy Of Test', , 10,'2012-09-15','2012-09-15','2012-12-14','2012-12-19 15:32:19')---------
+
+

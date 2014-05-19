@@ -1,0 +1,762 @@
+/* 
+Title:		misc style that we need 
+Author: 	Adi SF
+*/
+
+/* css for fg button*/
+/* button styles */
+
+.fg-button {
+    outline: 0;
+    margin: 0 4px 0 0;
+    padding: .4em 1em;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    zoom: 1;
+}
+
+.fg-button .ui-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+a.fg-button {
+    float: left;
+}
+
+/*remove extra button width in IE */
+
+button.fg-button {
+    width: auto;
+    overflow: visible;
+}
+
+.fg-button-icon-left {
+    padding-left: 2.1em;
+}
+
+.fg-button-icon-right {
+    padding-right: 2.1em;
+}
+
+.fg-button-icon-left .ui-icon {
+    right: auto;
+    left: .2em;
+    margin-left: 0;
+}
+
+.fg-button-icon-right .ui-icon {
+    left: auto;
+    right: .2em;
+    margin-left: 0;
+}
+
+.fg-button-icon-solo {
+    display: block;
+    width: 8px;
+    text-indent: -9999px;
+}
+
+/* solo icon buttons must have block properties for the text-indent to work */
+
+.fg-buttonset {
+    float: left;
+}
+
+.fg-buttonset .fg-button {
+    float: left;
+}
+
+.fg-buttonset-single .fg-button,
+.fg-buttonset-multi .fg-button {
+    margin-right: -1px;
+}
+
+.fg-toolbar {
+    margin: 0;
+}
+
+.fg-toolbar .fg-buttonset {
+    margin-right: 1.5em;
+    padding-left: 1px;
+}
+
+.fg-toolbar .fg-button {
+    font-size: 1em;
+}
+
+/* table customised css   */
+
+#hor-minimalist-a {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background: #F2B7D3;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#hor-minimalist-a th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-bottom: 2px solid #666;
+    background-color: #C00000;
+    text-align: left;
+}
+
+#hor-minimalist-a td {
+    color: #000000;
+
+}
+
+#hor-minimalist-a tbody tr:hover {
+    background-color: #CCC;
+
+}
+
+div#users-contain table td, div#users-contain table th {
+    padding: .6em 10px;
+    text-align: left;
+}
+
+/*--- THE MAGIC ---*/
+/* for placeholder
+This is the best bit!
+*/
+[placeholder] {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #999;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+[placeholder]:active,
+[placeholder]:focus {
+    cursor: text;
+    border: 1px solid #0a0;
+
+    -moz-box-shadow: 0 0 5px #0a0, 0 0 5px rgba(0, 0, 0, 0.25) inset;
+    -webkit-box-shadow: 0 0 5px #0a0, 0 0 5px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 0 5px #0a0, 0 0 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* general form css*/
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+legend {
+    padding: 0.5em;
+}
+
+fieldset fieldset label {
+    display: block;
+}
+
+#signupForm {
+    width: 1000px;
+}
+
+#signupForm label.error {
+    margin-left: auto : 10 px;
+    width: auto;
+    display: inline;
+}
+
+.chart-title {
+    background-color: #C00000;
+
+}
+
+label.error {
+    float: none;
+    font-style: italic;
+    color: red;
+    top: 16px;
+    left: 0;
+    font-size: 12px;
+}
+
+/* css for checking pwd strength*/
+.password {
+    font-size: 12px;
+    border: 1px solid #cc9933;
+    width: 200px;
+    font-family: arial, sans-serif;
+}
+
+.pstrength-minchar {
+    font-size: 10px;
+}
+
+/* css for multiselect error*/
+.message {
+    padding: 10px;
+    margin: 15px 0;
+    display: block;
+    text-align: left
+}
+
+.message-title {
+    font-weight: bold;
+    font-size: 1.25em
+}
+
+.message-body {
+    margin-top: 4px
+}
+
+.error, .notice, .success {
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 2px solid #ddd
+}
+
+.error {
+    background: #FBE3E4;
+    color: #8a1f11;
+    border-color: #FBC2C4
+}
+
+.notice {
+    background: #FFF6BF;
+    color: #514721;
+    border-color: #FFD324
+}
+
+.success {
+    background: #E6EFC2;
+    color: #264409;
+    border-color: #C6D880
+}
+
+.error a {
+    color: #8a1f11
+}
+
+.notice a {
+    color: #514721
+}
+
+.success a {
+    color: #264409
+}
+
+/* css for star rating. caption*/
+.caption {
+    padding: 2px 0 0 .5em;
+    float: left;
+    line-height: 1em;
+}
+
+/* css for colouring row in jqgrid*/
+.duecontract-row {
+    /* background-color:#F00 !important;*/
+    /*border:none;        !important;*/
+    color: #C00;
+!important
+}
+
+.expirecontract-row {
+    background-color: #CCC !important;
+    border: none;
+!important;
+    color: #FFF
+}
+
+/* sortable css*/
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+#sortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 1.4em;
+    height: 18px;
+}
+
+#sortable li span {
+    position: absolute;
+    margin-left: -1.3em;
+}
+
+/**
+* Email Sessions
+**/
+#session_emails .templates td.template_name {
+    text-transform: uppercase;
+}
+
+#template_admin {
+    background-color: #def1f8;
+}
+
+#session_container {
+    position: relative;
+    border: 4px solid #E21F3C;
+    background-color: #F7F7F2;
+    margin: 10px auto;
+
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -khtml-border-radius: 18px;
+}
+
+#session_container #main_content {
+    position: relative;
+    z-index: 10;
+}
+
+#template_admin #session_container {
+    width: 942px;
+
+}
+
+#session_container div.inner {
+    padding: 5px 45px 15px 25px;
+}
+
+#session_container form {
+    margin: 0;
+}
+
+#template_admin form#form1 {
+    display: none;
+}
+
+#session_container .content {
+    padding-top: 20px;
+}
+
+#session_container .span6.content {
+    width: 47.7%;
+}
+
+#session_container div.notification {
+    display: block;
+    background-color: #E21F3C;
+    padding: 10px;
+    color: white;
+    margin: 10px 0;
+
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -khtml-border-radius: 6px;
+
+    -webkit-box-shadow: 4px 3px 0px 0px rgba(94, 74, 62, 0.15);
+    box-shadow: 4px 3px 0px 0px rgba(94, 74, 62, 0.15);
+}
+
+#session_container .content fieldset.template_box {
+    border: 1px solid #DFDBD8;
+    background-color: #EFEDEC;
+    margin-bottom: 15px;
+    padding-top: 12px;
+    position: relative;
+    width: 100%;
+
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+
+    min-height: 20px;
+
+    border: 1px solid #CCC;
+
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -khtml-border-radius: 18px;
+}
+
+#session_container a.question {
+    background: url(../images/question.png) no-repeat scroll top right transparent;
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+#session_container a.close_btn {
+    background: url(../images/close.png) no-repeat scroll top right transparent;
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+#session_container .content fieldset.template_box a.question {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+}
+
+#session_container .content fieldset.template_box legend, body#greenroom .legend {
+    background-color: #E21F3C;
+    padding: 6px 20px;
+    margin: 0;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1em;
+    font-family: impact, arial;
+    color: white;
+    font-size: 15px;
+
+    width: auto;
+    position: absolute;
+    z-index: 1000;
+    top: -10px;
+    left: 7px;
+
+    border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    -khtml-border-radius: 0 0 6px 6px;
+
+    -webkit-box-shadow: 4px 3px 0px 0px rgba(94, 74, 62, 0.15);
+    box-shadow: 4px 3px 0px 0px rgba(94, 74, 62, 0.15);
+}
+
+#session_container .content fieldset.template_box#image_upload img {
+    width: 100%;
+}
+
+#session_container .content .email_box legend.collapse_legend {
+    background: url(../images/collapse.png) no-repeat scroll 5px 5px #E21F3C;
+    padding: 6px 20px 6px 29px;
+    cursor: pointer;
+}
+
+#session_container .content fieldset.template_box legend span.corner, body#greenroom .legend span.corner {
+    background: url(../images/corner.png) no-repeat scroll top right transparent;
+    width: 7px;
+    height: 10px;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: -7px;
+}
+
+#session_container .content fieldset.template_box h3 {
+    color: #E51937;
+    font-size: 15px;
+    font-family: impact, arial;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+#session_container .content fieldset.template_box label {
+    display: none;
+}
+
+#session_container .content#sidebar fieldset.template_box .notification {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 90%;
+    margin: 0 2.5% 2.5%;
+}
+
+#session_container .content fieldset.template_box .textbox {
+    display: block;
+    width: 92%;
+    padding: 7px;
+    margin: 0 8px 9px;
+
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -khtml-border-radius: 12px;
+}
+
+#session_container .content .template_box.full .textbox {
+    width: 96%;
+}
+
+#session_container .content#sidebar fieldset.template_box .textbox.upload {
+    width: 76%;
+    float: left;
+}
+
+#session_container .content#sidebar fieldset.template_box .textbox.upload.full {
+    width: 92%;
+}
+
+#session_container .content#sidebar fieldset.template_box .textbox.file {
+    padding-bottom: 0;
+    background-color: white;
+}
+
+#session_container .content#sidebar fieldset.template_box input.upload_btn {
+    position: relative;
+    top: 4px;
+}
+
+#session_container .content fieldset.template_box select.selector {
+    margin: 0 8px 12px;
+    width: 98%;
+}
+
+#session_container .content fieldset.template_box .inner {
+    padding-top: 15px;
+}
+
+#session_container .content .email_box#usable_tags li {
+    padding: 12px 0;
+    border-bottom: 1px dotted #F4A8B3;
+    position: relative;
+}
+
+#session_container .content .email_box#usable_tags li span.tag {
+    color: #5E4A3E;
+    letter-spacing: 2px;
+
+    position: absolute;
+    top: auto;
+    left: 150px;
+}
+
+#session_container .content .email_box#usable_tags li.last {
+    border: 0 none;
+}
+
+#session_container .content fieldset#video_player #player_container {
+    width: 100%;
+}
+
+#session_container .content fieldset#video_player #player_container object {
+    width: 415px;
+    height: 311px;
+}
+
+#session_container #video_player #control {
+    text-align: center;
+}
+
+#session_container #video_player #control .inner {
+    padding: 0;
+    margin-top: 10px;
+}
+
+#session_container #video_player #control a.control {
+    width: 20px;
+    height: 12px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    background-size: auto 100%;
+
+    background: no-repeat scroll center transparent;
+}
+
+#session_container #video_player #control a.control span {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+
+#session_container #video_player #progress {
+    background-color: #D7D2CF;
+    display: block;
+    height: 10px;
+
+    cursor: pointer;
+
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+}
+
+#session_container #video_player #progress #elapsed {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #E21F3C;
+
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+}
+
+#session_container fieldset#video_player #control #play {
+    background-image: url(../images/video_play.png);
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #play:hover,
+#session_container fieldset#video_player #control #play.isPlaying {
+    background-image: url(../images/video_play_over.png);
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #pause {
+    background-image: url(../images/video_pause.png);
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #pause:hover,
+#session_container fieldset#video_player #control #pause.active {
+    background-image: url(../images/video_pause_over.png);
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #volume {
+    background-image: url(../images/video_volume_on.png);
+    background-position: center;
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #volume:hover {
+    background-image: url(../images/video_volume_on_over.png);
+    background-position: 1px 2px;
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #volume.off {
+    background-image: url(../images/video_volume_off.png);
+    background-position: 1px 2px;
+    background-size: auto 100%;
+}
+
+#session_container fieldset#video_player #control #volume.off:hover {
+    background-image: url(../images/video_volume_off_over.png);
+    background-position: center;
+    background-size: auto 100%;
+}
+
+#session_container div#email_buttons {
+    display: block;
+    text-align: right;
+    padding: 12px 0;
+    width: 100%;
+    position: relative;
+    right: 1em;
+    float: right;
+}
+
+/* Profile Page */
+.profile fieldset.ui-widget-content {
+    position: relative;
+    padding: 45px 20px 20px;
+}
+
+.profile legend.ui-widget-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.profile fieldset.ui-widget-content div.form_label {
+    width: 100%;
+
+    margin: 0 0 20px -2.1%;
+    padding: 10px 2%;
+}
+
+.profile fieldset.ui-widget-content div.form_item {
+    margin-top: 15px;
+}
+
+/* Forget Password screen */
+.profile #forget_password fieldset.ui-widget-content fieldset {
+    border: 1px solid #EEE;
+}
+
+.profile #forget_password fieldset.ui-widget-content fieldset div.form_item {
+    margin-top: 0;
+    padding: 0.5em 1.3em 1.3em;
+}
+
+.profile #forget_password fieldset.ui-widget-content div.form_item label {
+    width: auto;
+    display: inline-block;
+}
+
+/* Users Page */
+#users div.active_cell {
+    text-align: center;
+    line-height: 22px;
+}
+
+#users div.active_cell a {
+    font-weight: bold;
+}
+
+#users div.active_cell a.active {
+    color: #4ea337;
+}
+
+#users div.active_cell a.active:hover {
+    color: #E51937;
+}
+
+#users div.active_cell a.deactivated {
+    color: #E51937;
+}
+
+#users div.active_cell a.deactivated:hover {
+    color: #4ea337;
+}
+
+#users .session {
+    white-space: normal;
+}
+
+#users .checkboxes {
+    text-align: center;
+    white-space: normal;
+    margin: 5px 0;
+}
+
+#users .checkboxes .checkboxes_inner {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+#users .checkboxes .checkboxes_inner input, #users .checkboxes .checkboxes_inner label {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: auto;
+}
+
+#users .checkboxes .checkboxes_inner label {
+    margin-left: 0.2em;
+    position: relative;
+    top: 0.2em;
+}
+
+/* Client Company Users */
+#users-contain select#available_users {
+    width: 100%;
+}

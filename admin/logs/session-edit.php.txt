@@ -1,0 +1,120 @@
+---------25-09-2012 15:56:44---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 206
+		---------
+
+
+---------25-09-2012 15:56:44---------
+---------
+
+
+---------25-09-2012 15:58:04---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 206
+		---------
+
+
+---------25-09-2012 15:58:04---------
+---------
+
+
+---------25-09-2012 15:58:04---------
+206---------
+
+
+---------09-11-2012 11:46:12---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 231
+		---------
+
+
+---------09-11-2012 11:46:12---------
+<p>Your login access is <br><b> User Name:</b> heinrich@couchcreative.com.au <br><b> Password:</b> insiderfocus</br></p>
+			<p>Click  <a href="http://chat.insiderfocus.com/ifs/change_password.php?user_login_id=126"><b>here</b></a>  to change your Password and login.</p>---------
+
+
+---------09-11-2012 11:46:12---------
+231---------
+
+
+---------12-11-2012 15:14:13---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 109
+		---------
+
+
+---------12-11-2012 15:14:13---------
+---------
+
+
+---------12-11-2012 15:14:14---------
+109---------
+
+
+---------13-11-2012 14:34:03---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 235
+		---------
+
+
+---------13-11-2012 14:34:03---------
+---------
+
+
+---------13-11-2012 14:34:03---------
+235---------
+
+
+---------13-11-2012 14:40:58---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 237
+		---------
+
+
+---------13-11-2012 14:40:58---------
+<p>Your login access is <br><b> User Name:</b> heinrich@couchcreative.com.au <br><b> Password:</b> insiderfocus</br></p>
+			<p>Click  <a href="http://chat.insiderfocus.com/ifs/change_password.php?user_login_id=131"><b>here</b></a>  to change your Password and login.</p>---------
+
+
+---------13-11-2012 14:40:58---------
+237---------
+
+
+---------13-11-2012 15:57:03---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 234
+		---------
+
+
+---------13-11-2012 15:57:03---------
+234---------
+
+

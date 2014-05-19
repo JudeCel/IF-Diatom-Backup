@@ -1,0 +1,1426 @@
+---------07-06-2012 16:36:44---------
+
+			SELECT 
+			  participant_lists.participant_id,
+			  participant_lists.id,
+			  participant_lists.participant_reply_id
+			FROM
+			  participant_lists
+			  
+			WHERE
+			  participant_lists.session_id = 98
+			  AND participant_lists.reply_id=1
+		---------
+
+
+---------07-06-2012 16:37:12---------
+
+			SELECT 
+			  participant_lists.participant_id,
+			  participant_lists.id,
+			  participant_lists.participant_reply_id
+			FROM
+			  participant_lists
+			  
+			WHERE
+			  participant_lists.session_id = 98
+			  AND participant_lists.reply_id=1
+		---------
+
+
+---------07-06-2012 16:37:53---------
+
+			SELECT 
+			  participant_lists.participant_id,
+			  participant_lists.id,
+			  participant_lists.participant_reply_id
+			FROM
+			  participant_lists
+			  
+			WHERE
+			  participant_lists.session_id = 98
+			  AND participant_lists.participant_reply_id=1
+		---------
+
+
+---------07-06-2012 16:37:53---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 
+		---------
+
+
+---------07-06-2012 16:39:28---------
+
+			SELECT 
+			  participant_lists.participant_id,
+			  participant_lists.id,
+			  participant_lists.participant_reply_id
+			FROM
+			  participant_lists
+			  
+			WHERE
+			  participant_lists.session_id = 98
+			  AND participant_lists.participant_reply_id=1
+		---------
+
+
+---------07-06-2012 16:39:28---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 31
+		---------
+
+
+---------07-06-2012 16:39:28---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:28---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:28---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:28---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Mike,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=31&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=31&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 32
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear David,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=32&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=32&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 33
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Cheng,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=33&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=33&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 34
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Wade,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=34&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=34&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 35
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Steve,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=35&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=35&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 36
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Ann-Marie,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=36&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=36&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 39
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:39:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:39:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Jacqui,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=39&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=39&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  participant_lists.participant_id,
+			  participant_lists.id,
+			  participant_lists.participant_reply_id
+			FROM
+			  participant_lists
+			  
+			WHERE
+			  participant_lists.session_id = 98
+			  AND participant_lists.participant_reply_id=1
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 31
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Mike,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=31&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=31&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 32
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear David,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=32&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=32&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 33
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Cheng,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=33&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=33&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 34
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Wade,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=34&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=34&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 35
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Steve,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=35&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=35&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 36
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Ann-Marie,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=36&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=36&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 39
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Jacqui,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=39&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=39&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  users.name_first,
+			  users.name_last,
+			  users.email,
+			  users.id
+			FROM
+			  users
+			  INNER JOIN participants ON (users.id = participants.user_id)
+			  
+			WHERE
+			  participants.id = 38
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  sessions.start_time,
+			  sessions.end_time,
+			  brand_projects.id,
+			  brand_projects.name,
+			  brand_projects.logo_thumbnail_url,
+			  sessions.incentive_details
+			FROM
+			  sessions
+			  INNER JOIN brand_projects ON (sessions.brand_project_id = brand_projects.id)
+			WHERE
+			  sessions.id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+			SELECT 
+			  session_emails.id,
+			  session_emails.subject,
+			  session_emails.email_message_top,
+			  session_emails.email_message_bottom
+			FROM
+			  session_emails
+			WHERE
+			  session_emails.session_id = 98 AND 
+			  session_emails.email_type_id = 5
+		---------
+
+
+---------07-06-2012 16:41:29---------
+
+		SELECT 
+		  users.name_first,
+		  users.name_last,
+		  users.email,
+		  users.id,
+		  users.job_title,
+		  users.mobile,
+		  client_companies.name
+		FROM
+		  users
+		  INNER JOIN session_staff ON (users.id = session_staff.user_id)
+		  INNER JOIN client_users ON (users.id = client_users.user_id)
+		  INNER JOIN client_companies ON (client_users.client_company_id = client_companies.id)
+		WHERE
+		  session_staff.type_id = 2 AND
+		  session_staff.session_id = 98
+		---------
+
+
+---------07-06-2012 16:41:29---------
+<table width="50%" border="0" cellpadding="1">  <tr>    <td><img src="http://chat.insiderfocus.com/upload/logo/thumbnail_IFS-BP1--1-1336715262.jpg" width="300" height="101" /></td>  </tr>  <tr><td></td></tr>  <tr>    <td>Dear Adi,</td>  </tr>  <tr>    <td> <br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.    </td>  </tr><tr>    <td><ul>      <li>If you would like to participate in another session in the future, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=38&participant_reply_id=1">here </a></u></strong></li>      <li>Or if you no longer wish to participate, please click, please click <strong><u><a href = "http://chat.insiderfocus.com/ifs/participantEmailReply-end.php?participant_id=38&participant_reply_id=2"> here </a></u></strong></li></ul></td>  </tr>  <tr>    <td><br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.<br />
+    If you would like to participate in another session in the future, please click here.<br />
+    Or if you no longer wish to participate, please click here.   </td>  </tr><tr>    <td><strong>email: eriks@ifs.com.au</strong></td>  </tr>  <tr>    <td><strong>mobile: 353</strong></td>  </tr>  <tr>    <td><em>This is a Do-Not-Reply email. Please use my email address above for queries.</em></td>  </tr></table>---------
+
+

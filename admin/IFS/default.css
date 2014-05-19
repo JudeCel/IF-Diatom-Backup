@@ -1,0 +1,11 @@
+input.chat {
+	width: 200px;
+	height: 40px;
+    border-style: hidden;
+    border-width: 0px;
+    color: #444444;
+    padding-left:20px;
+    padding-right:20px;
+    font-size:12pt;	
+	background-image: url(./resources/input.png);
+}

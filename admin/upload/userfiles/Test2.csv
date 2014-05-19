@@ -1,0 +1,4 @@
+Name_first,Name_last,Email,Gender,Phone,Mobile,Fax,Job Title,Street,State,Suburb,Post Code,Country,DOB,Ethnicity,Occupation,Brand Segment
+Participant,E,participantE@gmail.com,Male,1234567,12345678,123456789,Unemployee1,123 Kingwilliam ,SA,adelaide,5000,India,82-10-15,Australia,student,abc
+Participant,F,paritcipantF@gmail.com,Female,98765,987654,987654321,Unemployee2,456 wakefield ,SA,kent town,5067,India,84-12-27,India,student,edf
+Participant,G,paritcipantG@gmail.com,Male,234,345,456,HR,789 pirer street,SA,adelaide,5000,Australia,77-02-04,India,Worker,5

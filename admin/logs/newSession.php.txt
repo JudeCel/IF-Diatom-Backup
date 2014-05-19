@@ -1,0 +1,270 @@
+---------13-09-2012 14:56:45---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 204
+		---------
+
+
+---------13-09-2012 14:56:45---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 204
+		---------
+
+
+---------25-09-2012 15:07:09---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 206
+		---------
+
+
+---------25-09-2012 15:07:09---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 206
+		---------
+
+
+---------25-09-2012 15:07:46---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 109
+		---------
+
+
+---------25-09-2012 15:07:46---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 109
+		---------
+
+
+---------25-09-2012 15:10:30---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 109
+		---------
+
+
+---------25-09-2012 15:10:30---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 109
+		---------
+
+
+---------25-09-2012 15:14:08---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 206
+		---------
+
+
+---------25-09-2012 15:14:08---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 206
+		---------
+
+
+---------25-09-2012 15:14:39---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 206
+		---------
+
+
+---------25-09-2012 15:14:39---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 206
+		---------
+
+
+---------12-11-2012 15:18:06---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 232
+		---------
+
+
+---------12-11-2012 15:18:06---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 232
+		---------
+
+
+---------12-11-2012 15:59:16---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 234
+		---------
+
+
+---------12-11-2012 15:59:16---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 234
+		---------
+
+
+---------13-11-2012 14:20:50---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 234
+		---------
+
+
+---------13-11-2012 14:20:50---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 234
+		---------
+
+
+---------19-11-2012 12:10:24---------
+
+		SELECT 
+		  users.id,
+		  user_logins.username,
+		  user_logins.id As login_id,
+		  users.name_first,
+		  users.name_last,
+		  users.email
+		FROM
+		  user_logins
+		  INNER JOIN users ON (user_logins.id = users.user_login_id)
+		WHERE
+			users.id = 234
+		---------
+
+
+---------19-11-2012 12:10:24---------
+SELECT 
+						  email_log.user_id
+						FROM
+						  email_log
+						WHERE
+							email_log.user_id = 234
+		---------
+
+

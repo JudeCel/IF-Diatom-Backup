@@ -1,0 +1,52 @@
+{
+  "name": "server",
+  "version": "0.0.2",
+  "description": "nodejs IF mid-tier",
+  "main": "app.js",
+  "dependencies": {
+    "async": "~0.2.9",
+    "express": "~3.0.6",
+    "log4js": "~0.6.8",
+    "lodash": "~2.1.0",
+	"mysql": "~2.0.1",
+	"express-validator": "~0.3.2",
+    "if-data": "git+ssh://git@github.com:Takhir/if-data.git",
+    "if-common": "git+ssh://git@github.com:Takhir/if-common.git",
+	"if-reports": "git+ssh://git@github.com:Takhir/if-reports.git",
+	"if-test-helpers": "git+ssh://git@github.com:Takhir/if-test-helpers.git",
+	"imagemagic": "git+ssh://git@github.com:rsms/node-imagemagick.git",
+    "dateformat": "1.0.6-1.2.3",
+    "joi": "~0.3.6",
+    "simpler-config": "~0.0.4",
+    "request": "~2.27.0",
+    "q": "~0.9.7",
+    "log4js-node-amqp": "~0.0.5",
+	"socket.io": "~0.9.16"
+
+  },
+  "devDependencies": {
+    "tap": "~0.4.3",
+    "mockery": "~1.4.0",
+    "grunt": "~0.4.1",
+    "grunt-node-tap": "git+ssh://git@github.com:Takhir/grunt-node-tap.git",
+    "grunt-exec": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-json-replace": "~0.1.2",
+    "grunt-config": "~0.1.4"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Takhir/if-server.git"
+  },
+  "private": true,
+  "author": "InsiderFocus",
+  "bugs": {
+    "url": "https://github.com/Takhir/if-server/issues"
+  },
+  "homepage": "https://github.com/Takhir/if-server",
+  "license": "01"
+}

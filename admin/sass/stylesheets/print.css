@@ -1,0 +1,30 @@
+/* line 1, ../sass/print.scss */
+#datadictionary {
+  font-size: 0.7em;
+}
+/* line 4, ../sass/print.scss */
+#datadictionary thead {
+  border-bottom: 1px solid black;
+}
+/* line 8, ../sass/print.scss */
+#datadictionary th, #datadictionary td {
+  text-align: left;
+  padding: 1em;
+}
+/* line 12, ../sass/print.scss */
+#datadictionary th:first-child, #datadictionary td:first-child {
+  padding-left: 0;
+}
+/* line 17, ../sass/print.scss */
+#datadictionary ul, #datadictionary li {
+  margin: 0;
+  padding: 0;
+}
+/* line 22, ../sass/print.scss */
+#datadictionary div.actions {
+  display: none;
+}
+/* line 26, ../sass/print.scss */
+#datadictionary div.definition {
+  page-break-inside: avoid;
+}

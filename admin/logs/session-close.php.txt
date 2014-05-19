@@ -1,0 +1,2134 @@
+---------18-09-2012 09:19:42---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:40:47---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:41:23---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:44:04---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:45:10---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:45:48---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:46:10---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:50:56---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:52:26---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:52:44---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:54:23---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:56:05---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------18-09-2012 09:56:45---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------31-10-2012 15:30:39---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 98 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------21-11-2012 09:44:01---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 103 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------21-11-2012 09:44:04---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 103 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------21-11-2012 09:44:08---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 103 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------21-11-2012 09:44:25---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 103 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 14:55:22---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 15:55:41---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 15:55:53---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 15:58:01---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:00:26---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:03:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:35:53---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:37:19---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:38:10---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:39:37---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:40:39---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:40:48---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:42:00---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:42:20---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:43:08---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:43:25---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:44:57---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:45:34---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:45:58---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:46:20---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:46:54---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:49:13---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:51:36---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:52:56---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:54:35---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 16:57:24---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 17:01:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-12-2012 17:04:44---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 102 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:02:51---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:07:26---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:08:36---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:10:26---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:11:31---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------12-12-2012 12:31:01---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 105 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-12-2012 16:02:28---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 113 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------20-01-2013 18:02:20---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 153 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:45:35---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:45:46---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:45:58---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:46:44---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:46:48---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:47:03---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------04-02-2013 14:47:04---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 154 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-02-2013 11:13:47---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 161 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-02-2013 11:14:35---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 161 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-02-2013 14:56:26---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-02-2013 14:56:33---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------14-02-2013 14:57:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:26:43---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:27:34---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:28:22---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:30:18---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:32:18---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:32:30---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:43:01---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:43:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:44:15---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:45:46---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:48:16---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:48:18---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:49:33---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 18:51:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 179 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 19:55:38---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 166 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------17-05-2013 19:56:17---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 178 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------01-07-2013 16:18:30---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 145 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------01-07-2013 16:25:25---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 145 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------01-07-2013 20:52:22---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 161 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------01-07-2013 20:55:27---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 161 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------07-07-2013 20:40:20---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 165 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------10-07-2013 11:50:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 169 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------10-07-2013 11:50:42---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 169 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------11-07-2013 08:20:30---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 124 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------15-07-2013 10:08:45---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 122 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------24-07-2013 11:50:03---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 169 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------05-08-2013 09:03:21---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-08-2013 09:29:01---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------06-08-2013 09:29:39---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 176 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------07-08-2013 15:50:12---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 174 AND participant_lists.participant_reply_id IS NULL---------
+
+
+---------07-08-2013 16:03:47---------
+SELECT 
+			  participants.id As participant_id,
+			  users.id As user_id,
+			  users.email,
+			  participant_lists.participant_reply_id,
+			  participant_lists.session_id,
+			  users.name_first,
+			  users.name_last,
+			  users.invites,
+			  users.invites_accepted,
+			  users.invites_not_now,
+			  users.invites_not_interested,
+			  users.invites_no_reply
+			FROM
+			  participant_lists
+			  INNER JOIN participants ON (participant_lists.participant_id = participants.id)
+			  INNER JOIN users ON (participants.user_id = users.id)    
+			WHERE
+				participant_lists.session_id = 174 AND participant_lists.participant_reply_id IS NULL---------
+
+

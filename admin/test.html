@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<script type="text/javascript">
+	var result = solution([0, 1, 1, 1, 0, 1, 1, 1, 0, 1]);
+	if (result != 1) {
+		alert('fail!');
+	}
+	result = solution([0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1]);
+	if (result != 9) {
+		alert('fail!');
+	}
+	result = solution([1,1,1,1,0]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([1,1,1,1,0,1,1,1,1]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,0,1,1,1,1]);
+	if (result != 4) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,0,1,0,0,0]);
+	if (result != 4) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,0,1,0,0,0,1,1]);
+	if (result != 8) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,0,1,0,0,0,1]);
+	if (result != 4) {
+		alert('fail!');
+	}
+
+	result = solution([0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0]);
+	if (result != 1) {
+		alert('fail!');
+	}
+	result = solution([1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0]);
+	if (result != 0) {
+		alert('fail!');
+	}
+
+	result = solution([1,0,0,0]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,1]);
+	if (result != 3) {
+		alert('fail!');
+	}
+
+	result = solution([1,0,1]);     // fail 1
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([0,1,0]);
+	if (result != 1) {
+		alert('fail!');
+	}
+
+	result = solution([1,0]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([0,1]);
+	if (result != 1) {
+		alert('fail!');
+	}
+
+	result = solution([0,1,0,1]);
+	if (result != 1) {
+		alert('fail!');
+	}
+	result = solution([1,0,1,0]);
+	if (result != 0) {
+		alert('fail!');
+	}
+
+	result = solution([1,1,1,1]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([1,1]);
+	if (result != 0) {
+		alert('fail!');
+	}
+	result = solution([0,0,0,0]);
+	if (result != -1) {
+		alert('fail!');
+	}
+	result = solution([0,0]);
+	if (result != -1) {
+		alert('fail!');
+	}
+	result = solution([0]);
+	if (result != -1) {
+		alert('fail!');
+	}
+	result = solution([1]);
+	if (result != 0) {
+		alert('fail!');
+	}
+
+
+	function solution(A) {
+		var n = A.length;
+		var i = n - 1;
+		var result = -1;
+		var maximal = 0, k = 0;
+		while (i >= 0) {                // fix #1
+			if (A[i] == 1) {
+				k = k + 1;
+				if (k >= maximal) {
+					maximal = k;
+					result = i;
+				}
+			}
+			else
+				k = 0;
+			i = i - 1;
+		}
+		if (A[i+1] == 1 && k + 1 > maximal)
+			result = 0;
+		return result;
+	}
+
+</script>
+</body>
+</html>

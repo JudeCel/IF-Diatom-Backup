@@ -1,0 +1,8 @@
+First Name,Last Name,Gender,Email,Mobile,Phone,Fax,Job Title,Street,State,Suburb,Postcode,Country,Number of Invites,Invites - Accepted,Invites - Not Now,Invites - Not Interested,Invites - No Reply,Last Invited Session Name,DOB(D-M-Y),Ethnicity,Occupation,Brand Segment,Invite Again,Optional 1,Optional 2,Optional 3,Optional 4,Optional 5
+John ,Green,Male,ec7247@gmail.com,403290248,,,,,,,,Australia,1,0,0,0,1,,1/01/70,,,,Yes,,,,,
+Peter,Brown,Male,ecel@mail.com,403290248,,,,,,,,Australia,0,0,0,0,0,,1/01/70,,,,Yes,,,,,
+Mike,Sarah,Male,mike@couchcreative.com.au,345,234,456,HR,789 pirer street,,,,Australia,0,0,0,0,0,,4/02/77,China,Worker,5,Yes,,,,,
+Heinrich,van der Berg,Male,heinrich@couchcreative.com.au,423708636,234,456,HR,789 pirer street,,,,Australia,6,4,1,1,0,IFS-BP1-Sess1,4/02/77,China,Worker,,Yes,,,,,
+John,Green,Male,ec7247@gmail.com,345,234,456,HR,789 pirer street,,,,Australia,0,0,0,0,0,,4/02/77,China,Worker,5,Yes,,,,,
+Peter,Brown,Male,ecel@mail.com,345,234,456,HR,789 pirer street,,,,Australia,0,0,0,0,0,,4/02/77,China,Worker,5,Yes,,,,,
+Test,Test,Male,vdbergh@yahoo.com.au,423708636,,,,,,,,Australia,0,0,0,0,0,,1/01/70,,,,Yes,,,,,

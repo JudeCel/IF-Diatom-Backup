@@ -1,0 +1,24 @@
+{
+	"mode": "test",
+	"conflict": "drop existing",
+	"copyright": "2011 - 2014 ThirdWaveMedia Pty. Ltd.",
+	"port": "7777",
+	"domain": "localhost",
+	"paths": {
+		"fsPath": "C:/InsiderFocus/ifs/",
+		"urlPath": "http://localhost:7778/",
+		"serverPath": "server/",
+		"configPath": "config/",
+		"adminPath": "admin/",
+		"chatRoomPath": "chat_room/",
+        "convertPath": "C:/Program Files/ImageMagick-6.6.9-Q16/convert",
+        "identifyPath": "C:/Program Files/ImageMagick-6.6.9-Q16/identify"
+	},
+	"mysql": {
+		"host": "dev01",
+		"port": 3306,
+		"user": "ifuser",
+		"password": "aaa",
+		"database": "if"
+	}
+}

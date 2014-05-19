@@ -1,0 +1,29 @@
+#datadictionary{
+	font-size: 0.7em;
+	
+	thead{
+		border-bottom: 1px solid black;
+	}
+	
+	th, td{
+		text-align: left;
+		padding: 1em;
+		
+		&:first-child{
+			padding-left: 0;
+		}
+	}
+	
+	ul, li{
+		margin: 0;
+		padding: 0;
+	}
+	
+	div.actions{
+		display: none;
+	}
+	
+	div.definition{
+		page-break-inside: avoid;
+	}
+}

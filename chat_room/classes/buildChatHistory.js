@@ -93,7 +93,8 @@ build.ChatHistory.prototype.processChatHistory = function(data) {
 		this.updateAvatarEmotion(event.name, event.object.emotion);
 
 		if (isEmpty(nameIndex[data[ndx].user_id])) {
-			var nameNdx = window.topic.getAvatarIndexByName(event.name);
+			//var nameNdx = window.topic.getAvatarIndexByName(event.name);
+            var nameNdx = window.topic.getAvatarIndexByUserId(data[ndx].user_id);
 			nameIndex[data[ndx].user_id] = nameNdx;
 		} else {
 			nameNdx = nameIndex[data[ndx].user_id];

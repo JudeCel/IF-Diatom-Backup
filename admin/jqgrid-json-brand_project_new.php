@@ -58,7 +58,7 @@
 	if(isset($_GET['sord'])){
 		$sord = strip_tags(mysql_real_escape_string($_GET['sord']));
 	}
-
+/*
     $total_pages = 0;
 
     if($page > $total_pages){
@@ -71,7 +71,7 @@
 
     //Determin start point
     $start = ($limit * $page) - $limit;
-
+*/
 
 	$totalrows = 0;
 	if(isset($_GET['totalrows'])){
@@ -95,6 +95,7 @@
 
     $params =new stdClass();
     $params->companyId=$_SESSION['MM_CompanyId'];
+/*
     $params->sidx=$sidx;
     $params->sord=$sord;
     if ($start>=0)
@@ -102,6 +103,7 @@
     else
         $params->start=0;
     $params->limit=$limit;
+*/
 	talkToNode("/getBrandProject",$params,$brand_projects);
 
 	//Get brand project information
@@ -153,9 +155,9 @@
 	$properties = array();
 	if($sidx && $sord){
 		$params->sidx=$sidx;
-        $params->dord=$sord;
+        $params->sord=$sord;
 	}
-	if($start && $limit){
+	if(isset($start) && isset($limit)){
         $params->start=$start;
         $params->limit=$limit;
 	}

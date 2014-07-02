@@ -1,28 +1,33 @@
 var view = namespace('sf.ifs.View');
-
+var socket = null;
 /*
 	json = {
 		userId: int,			//
-		sessionId: int,			//	
+		sessionId: int,			//
 		x: int,					//	default 0
 		y: int,					//	default 0
 		width: int,				//	default 400
-		height: int,			//	default 265	
+		height: int,			//	default 265
 		radius: float,			//	default 10
 		injectInto: string		//	default ""
 	}
 */
 view.AvatarChooser = function (json, port, domain) {
 	//	we need our own connection to the server
-	this.socket = io.connect(domain + ':' + port);
+	//this.socket = io.connect(domain + ':' + port);//not work this.socket
+    socket = io.connect("http://" + domain + ':' + port, {
+        'reconnect': true,
+        'reconnection delay': 500,
+        'max reconnection attempts': 10
+    });
 
 	//	set up listeners...
-	this.socket.data = {
+    socket.data = {
 		me: this
 	}
-	
-	this.socket.on('avatarinfo', function(data) {
-		var attributes = data.avatarinfo.split(":");
+
+    socket.on('avatarinfo', function(data) {
+		var attributes = data.avatar_info.split(":");
 		var gender = data.gender;
 
 		switch(gender.toLowerCase()) {
@@ -50,7 +55,7 @@ view.AvatarChooser = function (json, port, domain) {
 		} else {
 			this.data.me.manifestation.colour = "#888888";
 		}
-		this.data.me.manifestation.name = data.name;
+		this.data.me.manifestation.name = data.name_first;
 
 		this.data.me.manifestation.head = attributes[0];
 		this.data.me.manifestation.face = attributes[1];
@@ -86,7 +91,7 @@ view.AvatarChooser = function (json, port, domain) {
 	}
 	this.manifestation = new sf.ifs.View.AvatarRenderer(avatarJson);
 
-	this.socket.emit('getavatarinfo', this.json.userId, this.json.sessionId);
+	socket.emit('getavatarinfo', this.json.userId, this.json.sessionId);
 
 	this.draw();
 }
@@ -182,7 +187,7 @@ view.AvatarChooser.prototype.drawSelection = function(shapeAsString, shapeSet, o
 			me.manifestation.draw();
 
 			//	lets update the db
-			var avatarInfo = "" + 
+			var avatarInfo = "" +
 				me.manifestation.head + ":" +
 				me.manifestation.face + ":" +
 				me.manifestation.hair + ":" +
@@ -190,10 +195,10 @@ view.AvatarChooser.prototype.drawSelection = function(shapeAsString, shapeSet, o
 				me.manifestation.accessory + ":" +
 				me.manifestation.desk;
 
-			me.socket.emit('setavatarinfo', me.json.userId, avatarInfo);
+			socket.emit('setavatarinfo', me.json.userId, avatarInfo);
 			if (!isEmpty(window.updateAvatar)) window.updateAvatar(me);
 		})
-		
+
 		this.shapes.push(shape);
 
 		//	update our position
@@ -226,7 +231,7 @@ view.AvatarChooser.prototype.drawSelection = function(shapeAsString, shapeSet, o
 	}
 
 	var transform = "t15,50";
-	
+
 	var deskLabel = deskLabels[0](this.json.paper, this.colour);
 	deskLabel.transform("t30,150");
 
@@ -235,19 +240,19 @@ view.AvatarChooser.prototype.drawSelection = function(shapeAsString, shapeSet, o
 
 	var head = heads[this.head](this.json.paper);
 	head.transform(transform);
-	
+
 	var face = faces[this.face](this.json.paper);
 	face.transform(transform);
-	
+
 	var hair = hairs[this.hair](this.json.paper);
 	hair.transform(transform);
-	
+
 	var top = tops[this.top](this.json.paper);
 	top.transform(transform);
-	
+
 	var accessory = accessories[this.accessory](this.json.paper);
 	accessory.transform(transform);
-	
+
 	var desk = desks[this.desk](this.json.paper);
 	desk.transform(transform);
 
@@ -381,8 +386,8 @@ view.AvatarChooser.prototype.draw = function() {
 		me.drawSelection("desk", desks, {
 			scale: 1,
 			offsetX: [
-				30, 15, 15, -30, 
-				30, -40, 45, 60, 
+				30, 15, 15, -30,
+				30, -40, 45, 60,
 				0, 30, 15, 30],
 			offsetY: -60,
 			incX: 40,
@@ -403,7 +408,7 @@ view.AvatarChooser.prototype.draw = function() {
 		//	hover out
 		function() {
 			var animationHoverOut = Raphael.animation({"opacity": 0.5}, 500);
-			
+
 			if (typeof this.animate != 'undefined') {
 				if (!this.removed) this.animate(animationHoverOut.delay(0));
 			}
@@ -423,7 +428,7 @@ view.AvatarChooser.prototype.draw = function() {
 		//	hover out
 		function() {
 			var animationHoverOut = Raphael.animation({"opacity": 0.5}, 500);
-			
+
 			if (typeof this.animate != 'undefined') {
 				if (!this.removed) this.animate(animationHoverOut.delay(0));
 			}
@@ -442,7 +447,7 @@ view.AvatarChooser.prototype.draw = function() {
 		//	hover out
 		function() {
 			var animationHoverOut = Raphael.animation({"opacity": 0.5}, 500);
-			
+
 			if (typeof this.animate != 'undefined') {
 				if (!this.removed) this.animate(animationHoverOut.delay(0));
 			}
@@ -461,7 +466,7 @@ view.AvatarChooser.prototype.draw = function() {
 		//	hover out
 		function() {
 			var animationHoverOut = Raphael.animation({"opacity": 0.5}, 500);
-			
+
 			if (typeof this.animate != 'undefined') {
 				if (!this.removed) this.animate(animationHoverOut.delay(0));
 			}

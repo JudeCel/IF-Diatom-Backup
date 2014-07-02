@@ -2,6 +2,7 @@ var mtypes = require('if-common').mtypes;
 var getReportData_ChatHistory = require('../getReportData_ChatHistory.js');
 var config = require('../../config/config.json');
 var FS_PATH = config.paths.fsPath + config.paths.chatRoomPath;
+var S = require('string');
 
 function getPrefix(params) {
     switch (params.report.type) {
@@ -48,25 +49,34 @@ module.exports.getReportRowObjects = function (data, nextCb) {
         };
 
         var rowEvent = null;
-        if (rowData.event)
-            try {
-                rowEvent = JSON.parse(decodeURI(rowData.event), null);
-            }
-            catch (ex) {
-                nextCb(ex);
-            }
+        if (rowData.event){
+            if(rowData.user_id == 0){
+                rowObject.isReply = false;
+                var txt = S(rowData.event).stripTags().s;
+                rowObject.comment = S(txt).decodeHTMLEntities().s;
+                rowObject.date = new Date();
+            }else {
+                try {
+                    rowEvent = JSON.parse(decodeURI(rowData.event), null);
+                }
+                catch (ex) {
+                    nextCb(ex);
+                }
 
-        if (rowEvent)
-            if (rowEvent.object) {
-                if (rowEvent.object.mode)
-                    rowObject.isReply = rowEvent.object.mode.type === "reply";
+                if (rowEvent)
+                    if (rowEvent.object) {
+                        if (rowEvent.object.mode)
+                            rowObject.isReply = rowEvent.object.mode.type === "reply";
 
-                rowObject.comment = rowEvent.object.input;
-                rowObject.emotion = rowEvent.object.emotion;
-                rowObject.date = new Date(rowEvent.object.date);
+                        rowObject.comment = rowEvent.object.input;
+                        rowObject.emotion = rowEvent.object.emotion;
+                        rowObject.date = new Date(rowEvent.object.date);
+                    }
             }
 
         result.push(rowObject);
+        }
+
     }
 
     return result;

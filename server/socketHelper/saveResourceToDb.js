@@ -17,8 +17,12 @@ function saveResourceToDb(json, resCb, nextCb) {
 
     getResourcesGeneric.execute(req, handleAllTempResources, nextCb);
 
+    var isAlreadyUpdateResources = false;
     function handleAllTempResources(resources) {
         for (var rid = 0; rid < resources.length; rid++) {
+            if(isAlreadyUpdateResources)
+                break;
+
             var resource = resources[rid];
             if (!resource.JSON)
                 continue;
@@ -59,11 +63,16 @@ function saveResourceToDb(json, resCb, nextCb) {
                         if (resultJson) {
                             json.title = resultJson.title;	//	lets add our label
 
-                            socketHelper.updateResources(json.topic_id, json.user_id, json, json.type, resCb);
-                            switch (json.type) {
-                                case 'collage':
-                                    socketHelper.createCustomEvent(json.topic_id, json.user_id, "collage", JSON.stringify(json, null));
-                                    break;
+
+                            if(isAlreadyUpdateResources == false){
+                                isAlreadyUpdateResources = true;
+                                socketHelper.updateResources(json.topic_id, json.user_id, json, json.type, resCb);
+
+                                switch (json.type) {
+                                    case 'collage':
+                                        socketHelper.createCustomEvent(json.topic_id, json.user_id, "collage", JSON.stringify(json, null));
+                                        break;
+                                }
                             }
                         }
                         else

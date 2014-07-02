@@ -56,7 +56,7 @@ var onBrandprojectinfo = function (data) {
                 }
             }
 
-            var orgURL = window.brandProjectInfo['chatroom_logo_url'];
+            var orgURL = escape(window.brandProjectInfo['chatroom_logo_url']);
             temp_index = orgURL.indexOf('upload');
             if (temp_index != -1) {
                 imgURL += 'admin/' + orgURL.substring(temp_index);

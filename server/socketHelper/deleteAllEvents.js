@@ -11,7 +11,9 @@ function deleteAllEvents(topicId) {
         // TBD
     };
 
-    var res = { send: null };
+    //var res = { send: null };
+    var res = { send: function () {
+    } };
 
     var deleteEvents = require('../handlers/deleteEvents.js');
     deleteEvents.validate(req, function (err) {

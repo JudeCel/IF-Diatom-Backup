@@ -437,7 +437,8 @@ view.Console.prototype.setConsole = function(json) {
 
 			break;
 	}
-
+    if(window.topicID == null)
+        return;
 	window.consoleState = consoleState;
 
 	//	lets update all the consoles

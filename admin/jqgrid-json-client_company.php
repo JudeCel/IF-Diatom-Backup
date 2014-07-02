@@ -20,44 +20,67 @@ if(!$sidx) {
 }
  
 $totalrows = isset($_GET['totalrows']) ? strip_tags(mysql_real_escape_string($_GET['totalrows'])): false;
- 
 
-if ($limit <0) {
-    $limit = 0;
-}
- 
-$start = $limit * $page - $limit;
- 
-if ($start <0) {
-    $start = 0;
-}
+    $params =new stdClass();
+    $params->companyId=$_SESSION['MM_CompanyId'];
+    talkToNode("/getClientCompanyInfo",$params,$result);
 
-switch($sidx){
-	case 'name':
-		$sidx = 'client_companies.name';
-	break;
-	case 'PrimaryContact':
-		$sidx = 'client_company_contacts.name_first';
-	break;
-	case 'CompanyComments':
-		$sidx = 'client_companies.comments';
-	break;
-	case 'start_date':
-		$sidx = 'client_companies.start_date';
-	break;
-	case 'end_date':
-		$sidx = 'client_companies.end_date';
-	break;
-	case 'Address':
-		$sidx = 'addresses.street';
-	break;
-	case 'URL':
-		$sidx = 'client_companies.URL';
-	break;
-	case 'ABN':
-		$sidx = 'client_companies.ABN';
-	break;
-}
+
+    $count = 0;
+    $rows = array();
+
+    // get the required variables
+    if($result){
+        $rows   = json_decode($result);
+        $count = sizeof($rows);
+    }
+
+    if( $count>0 && $limit) {
+        $total_pages = ceil($count / $limit);
+    } else {
+        $total_pages = 0;
+    }
+
+    if ($page> $total_pages) {
+        $page = $total_pages;
+    }
+
+    if ($limit <0) {
+        $limit = 0;
+    }
+
+    $start = $limit * $page - $limit;
+
+    if ($start <0) {
+        $start = 0;
+    }
+
+    switch($sidx){
+        case 'name':
+            $sidx = 'client_companies.name';
+        break;
+        case 'PrimaryContact':
+            $sidx = 'client_company_contacts.name_first';
+        break;
+        case 'CompanyComments':
+            $sidx = 'client_companies.comments';
+        break;
+        case 'start_date':
+            $sidx = 'client_companies.start_date';
+        break;
+        case 'end_date':
+            $sidx = 'client_companies.end_date';
+        break;
+        case 'Address':
+            $sidx = 'addresses.street';
+        break;
+        case 'URL':
+            $sidx = 'client_companies.URL';
+        break;
+        case 'ABN':
+            $sidx = 'client_companies.ABN';
+        break;
+    }
 
     $params =new stdClass();
     $params->companyId=$_SESSION['MM_CompanyId'];
@@ -67,7 +90,7 @@ switch($sidx){
     $params->limit=$limit;
     talkToNode("/getClientCompanyInfo",$params,$result);
 
-
+/*
     $count = 0;
     $rows = array();
 
@@ -78,14 +101,13 @@ switch($sidx){
         $count = sizeof($rows);
     }
 
-//$count  = $row['count'];
 
 // get the required variables
     if( $count>0 && $limit) {
         $total_pages = ceil($count / $limit);
     } else {
         $total_pages = 0;
-    }
+    }*/
 /*
     if ($page> $total_pages) {
         $page = $total_pages;
@@ -160,17 +182,50 @@ $totalrows = isset($_GET['totalrows']) ? strip_tags(mysql_real_escape_string($_G
 if($totalrows) {
     $limit = $totalrows;
 }
- 
 
- 
-// get the count of rows
+    $params =new stdClass();
+    $params->companyId=$_SESSION['MM_CompanyId'];
+    talkToNode("/getClientCompanyInfo",$params,$result);
 
- 
-$start = $limit * $page - $limit;
- 
-if ($start <0) {
-    $start = 0;
-}
+
+    $count = 0;
+    $rows = array();
+
+    // get the required variables
+    if($result){
+        $rows   = json_decode($result);
+        $count = sizeof($rows);
+    }
+
+    if( $count>0 && $limit) {
+        $total_pages = ceil($count / $limit);
+    } else {
+        $total_pages = 0;
+    }
+
+    if ($page> $total_pages) {
+        $page = $total_pages;
+    }
+
+    if( $count>0 ) {
+        $total_pages = ceil($count / $limit);
+    } else {
+        $total_pages = 0;
+    }
+
+    if ($page> $total_pages) {
+        $page = $total_pages;
+    }
+
+    if ($limit <0) {
+        $limit = 0;
+    }
+
+    $start = $limit * $page - $limit;
+
+    if ($start <0) {
+        $start = 0;
+    }
 
 switch($sidx){
   case 'name':
@@ -199,11 +254,7 @@ switch($sidx){
   break;
 }
 
-    if ($limit <0) {
-        $limit = 0;
-    }
-
-// get the actual stuff to be displayed in the grid
+ // get the actual stuff to be displayed in the grid
     $params =new stdClass();
     $params->companyId=$_SESSION['MM_CompanyId'];
     $params->sidx=$sidx;
@@ -215,6 +266,7 @@ switch($sidx){
 
 
 // get the count of rows
+/*
     if($result){
         $rows   = json_decode($result);
         $count = sizeof($rows);
@@ -225,7 +277,7 @@ switch($sidx){
     } else {
         $total_pages = 0;
     }
-
+*/
 // create a response array from the obtained result
 $response = new StdClass;
 $response->page    = $page;

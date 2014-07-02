@@ -21,8 +21,8 @@
     "request": "~2.27.0",
     "q": "~0.9.7",
     "log4js-node-amqp": "~0.0.5",
-	"socket.io": "~0.9.16"
-
+	"socket.io": "~0.9.16",
+	"string": "~1.8.1"
   },
   "devDependencies": {
     "tap": "~0.4.3",

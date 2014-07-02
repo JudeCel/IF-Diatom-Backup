@@ -160,7 +160,14 @@ var onTopics = function(data) {
 				window.topicID = currentTopic.id;
 				socket.emit('settopicid', window.topicID);
 			}
-			
+            //moving from onParticipants.js
+            var expandBillboard = document.getElementById("expandBillboard");
+            if(window.role === "facilitator" && window.topicID != null){
+                expandBillboard.style.display = "block";
+            } else{
+                expandBillboard.style.display = "none";
+            }
+
 			break;
 		}
 	}

@@ -22,7 +22,7 @@ function retrieve_email_template($sid, $type, $database, $ifs)
     mysql_select_db($database, $ifs);
     $query_retSessionEmail =
         "SELECT
- 				*
+ 				session_emails.*
   			FROM
  				session_emails
  		  	INNER JOIN

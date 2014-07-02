@@ -64,6 +64,7 @@
 			  users.name_first,
 			  users.name_last,
 			  users.Gender,
+			  users.uses_landline,
 			  users.email,
 			  users.job_title,
 			  users.phone,

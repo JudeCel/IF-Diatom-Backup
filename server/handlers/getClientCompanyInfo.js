@@ -8,10 +8,10 @@ var expressValidatorStub = require('../tests/testHelpers/expressValidatorStub.js
 var validate = function (req, next) {
     var err = joi.validate(req.params, {
         companyId: joi.types.Number(), //Code suggests this parameter might not be passed.
-        sidx: joi.types.String().with('sord').required(),
-        sord: joi.types.String().with('start').required(),
-        start: joi.types.Number().with('limit').required(),
-        limit: joi.types.Number().with('sidx').required()
+        sidx: joi.types.String().with('sord'),
+        sord: joi.types.String().with('start'),
+        start: joi.types.Number().with('limit'),
+        limit: joi.types.Number().with('sidx')
     });
     if (err)
         return next(webFaultHelper.getValidationFault(err.message));

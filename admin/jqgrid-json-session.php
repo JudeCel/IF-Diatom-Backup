@@ -276,12 +276,29 @@ if($_SESSION['MM_UserTypeId'] == 2 || $_SESSION['MM_UserTypeId'] == 3 || $_SESSI
     $sidx = NULL;
   }
 
+    $SQL = "";
+    if($sidx && $sord){
+        $SQL .= "\n";
+        $SQL .= 'ORDER BY' . "\n";
+        $SQL .= $sidx . ' ' . $sord . "\n";
+    }
+
+    if(isset($start) && isset($limit)){
+        $SQL .= "\n";
+        $SQL .= 'LIMIT' . "\n";
+        $SQL .= $start . ', ' . $limit;
+    }
 
 
   $count = 0;
   $row = array();
 
-  // get the count of rows
+    $params->limit=$SQL;
+    talkToNode("/getSessionDataForGrid",$params,$result1);
+
+    $rows   = json_decode($result1,true);
+
+    // get the count of rows
   //$result = mysql_query($SQL);
   if($rows){
     $count = sizeof($rows);

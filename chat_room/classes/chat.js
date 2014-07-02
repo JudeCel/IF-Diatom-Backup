@@ -73,7 +73,11 @@ view.Chat.prototype.draw = function() {
 		var me = this.data("this");
 		var chatObject = document.getElementById("chatTextArea");
 		var input = chatObject.value.trim();
-		
+
+        if(window.topicID == null){
+            return;
+        }
+
 		if (input.length === 0) {
 			me.mode = null;
 			me.setBackgroundColour();	//	make sure we reset the colour back

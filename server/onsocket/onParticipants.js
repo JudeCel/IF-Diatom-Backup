@@ -401,12 +401,14 @@ var onParticipants = function(data) {
 	initMainMenu(window.role);
 
     //[F] Facilitator expandBillboard
+    /* moving to onTopics.js
     var expandBillboard = document.getElementById("expandBillboard");
-    if(window.role === "facilitator"){
+    if(window.role === "facilitator" && window.topicID != null){
         expandBillboard.style.display = "block";
     } else{
         expandBillboard.style.display = "none";
     }
+    */
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	//	[J] Chat
 	if (window.role === "observer") {

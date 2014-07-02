@@ -157,7 +157,8 @@ module.exports = {
         });
 
         app.get("/getSessionDataForGrid", function (req, res) {
-            var params = {companyId: req.param("companyId")};
+            var params = {companyId: req.param("companyId"),
+                            limit: req.param("limit")};
             require("./handlers/getSessionDataForGrid.js").execute(params, function (data) {
                 res.send(data);
             }, function (err) {

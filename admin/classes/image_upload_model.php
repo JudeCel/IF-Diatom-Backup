@@ -78,7 +78,7 @@
 			}
 
 			if(!is_dir($dir_check)){				
-				$create_directory = mkdir($dir_check);
+				//$create_directory = mkdir($dir_check);
 			}
 
 			include('ampp.php'); //image upload class

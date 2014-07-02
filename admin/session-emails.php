@@ -12,7 +12,9 @@
 		$user_id = 0;
 		if(isset($_SESSION['MM_UserId']['user_id'])){
 			$user_id = $_SESSION['MM_UserId'];
-		}
+		}  elseif (isset($_SESSION['MM_UserId'])) { /* copied from IFS\index.php */
+            $user_id = $_SESSION['MM_UserId'];
+        }
 
 		/* Get user type id */
 		$user_type = null;
@@ -114,6 +116,7 @@
 
 			//Set Names
 			$brand_project_name = $row_retSessionInfo['brand_project_name'];
+
 			$client_company_name = $row_retSessionInfo['client_company_name'];
 			$session_name = $row_retSessionInfo['name'];
 

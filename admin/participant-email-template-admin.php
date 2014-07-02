@@ -73,7 +73,7 @@
 
 			$facilitator_firstname = $facilitator['name_first'];
 			$facilitator_lastname = $facilitator['name_last'];
-			$facilitator_phone = (isset($facilitator['mobile']) ? $facilitator['mobile'] : $facilitator['phone']);
+            $facilitator_phone = ($facilitator['uses_landline'] ?  $facilitator['phone'] : $facilitator['mobile']);
 			$facilitator_email = $facilitator['email'];
 		}
 	}

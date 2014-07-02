@@ -273,6 +273,18 @@ view.Topic.prototype.getAvatarIndexByIndex = function(index) {
 	return this.json.participants[index];
 }
 
+view.Topic.prototype.getAvatarIndexByUserId = function(user_id) {
+    var result = null;
+
+    for (var ndx = 0, pl = this.json.participants.length; ndx < pl; ndx++) {
+        if (user_id === this.json.participants[ndx].user_id) {
+            result = ndx;
+            break;
+        }
+    }
+    return result;
+};
+
 view.Topic.prototype.say = function(name, data) {
 	var avatar = this.getAvatarByName(name);
 	if (isEmpty(avatar)) return;

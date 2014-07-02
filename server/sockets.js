@@ -733,6 +733,7 @@ module.exports.listen = function (server) {
 
         function getToggleEventsFlag(topicId, resCb, nextCb) {
             getToggleEvents(topicId, function (result) {
+                /*
                 if (!result || !result.length)
                     return resCb(false);
 
@@ -744,6 +745,19 @@ module.exports.listen = function (server) {
 
                 var jsonResult = JSON.parse(decodeURI(result[0].event), null);
                 return resCb(jsonResult.content === "true");
+                */
+
+                var toggleOn = "true";	//	set up our default
+                if (result.length === 1) {
+                    if (result[0].event != null) {
+
+                        if (typeof result[0].event != "undefined") {
+                            var json = JSON.parse(decodeURI(result[0].event), null);
+                            toggleOn = ((json.content === "true") ? "false" : "true");
+                        }
+                    }
+                }
+                return resCb(toggleOn);
             }, nextCb)
         }
 
@@ -819,7 +833,7 @@ module.exports.listen = function (server) {
                     //before we do anything, lets see if we have a pictureboard
                     getToggleEventsFlag(topic_id, function (pinboardPresent) {
                         //do we want to remove the pictureboard?
-                        if (pinboardPresent) {
+                        if (!pinboardPresent) {
                             var removePictureboard = false;
                             switch (json.type) {
                                 case 'video':
@@ -835,7 +849,7 @@ module.exports.listen = function (server) {
                         }
 
                         //firstly we want to make sure our picture board is not showing...
-                        if (pinboardPresent) {
+                        if (!pinboardPresent) {
                             //OK, lets process the message now
                             if (json.updateEvent && removePictureboard) {
                                 //turn the pinboard off
@@ -1155,7 +1169,8 @@ module.exports.listen = function (server) {
 
             var resCb = function (result) {
                 if (!result) return;
-                io.sockets.sockets[socket.id].emit('avatarinfo', config, result);
+                //io.sockets.sockets[socket.id].emit('avatarinfo', config, result);
+                io.sockets.sockets[socket.id].emit('avatarinfo', result[0]);
             };
 
             var nextCb = function (err) {
@@ -1174,8 +1189,10 @@ module.exports.listen = function (server) {
         socket.on('setavatarinfo', function (userId, avatarInfo) {
             var req = expressValidatorStub({
                 params: {
-                    userId: userId,
-                    avatarInfo: avatarInfo
+                    //userId: userId,
+                    id: userId,
+                    //avatarInfo: avatarInfo
+                    avatar_info: avatarInfo
                 }
             });
 

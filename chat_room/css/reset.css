@@ -3,14 +3,14 @@
   v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
   html5doctor.com/html-5-reset-stylesheet/
 */
-
+/*  ol, ul,*/ /*delete  alex*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
@@ -23,7 +23,8 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
-}                  
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section { 
@@ -102,7 +103,7 @@ a, a:active, a:visited { color: #000; text-decoration:none; }
 a:hover { color: #000; }
 
 
-ul, ol { margin:0; padding:0; list-style:none; }
+/*ul, ol { margin:0; padding:0; list-style:none; }*/ /*delete  alex*/
 
 /* Remove margins for navigation lists */
 nav ul, nav li { margin: 0; } 

@@ -83,7 +83,7 @@ CONTENT ONLY
 #content-wrap blockquote { padding: 0 1em; margin: 1.6em 0; }
 #content-wrap dt { margin-top: .8em; margin-bottom: .4em; }
 #content-wrap ul { margin-left: 1.5em; }
-ol { margin-left: 2.35em; }
+/*ol { margin-left: 2.35em; }*/ /*delete  alex*/
 ol ol, ul ol { margin-left: 2.5em; }
 
 /* COLORS */

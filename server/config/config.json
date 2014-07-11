@@ -1,24 +1,24 @@
 {
-	"mode": "test",
+	"mode": "live",
 	"conflict": "drop existing",
 	"copyright": "2011 - 2014 ThirdWaveMedia Pty. Ltd.",
 	"port": "7777",
-	"domain": "localhost",
+	"domain": "yourvoice.insiderfocus.com",
 	"paths": {
 		"fsPath": "C:/InsiderFocus/ifs/",
-		"urlPath": "http://localhost:7778/",
+		"urlPath": "http://yourvoice.insiderfocus.com:7778/",
 		"serverPath": "server/",
 		"configPath": "config/",
 		"adminPath": "admin/",
 		"chatRoomPath": "chat_room/",
-        "convertPath": "C:/Program Files/ImageMagick-6.6.9-Q16/convert",
-        "identifyPath": "C:/Program Files/ImageMagick-6.6.9-Q16/identify"
+        "convertPath": "C:/Program Files/ImageMagick-6.8.9-Q16/convert",
+        "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify"
 	},
 	"mysql": {
-		"host": "dev01",
+		"host": "insiderfocus.cyujokxcbe0c.us-west-2.rds.amazonaws.com",
 		"port": 3306,
-		"user": "ifuser",
-		"password": "aaa",
-		"database": "if"
+		"user": "awsif",
+		"password": "awsifpass",
+		"database": "insiderfocus"
 	}
 }

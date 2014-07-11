@@ -10,10 +10,10 @@
     "lodash": "~2.1.0",
 	"mysql": "~2.0.1",
 	"express-validator": "~0.3.2",
-    "if-data": "git+ssh://git@github.com:Takhir/if-data.git",
-    "if-common": "git+ssh://git@github.com:Takhir/if-common.git",
-	"if-reports": "git+ssh://git@github.com:Takhir/if-reports.git",
-	"if-test-helpers": "git+ssh://git@github.com:Takhir/if-test-helpers.git",
+    "if-data": "git+ssh://git@github.com:JudeCel/IF-Data-Diatom.git",
+    "if-common": "git+ssh://git@github.com:JudeCel/IF-Common-Diatom.git",
+	"if-reports": "git+ssh://git@github.com:JudeCel/IF-Reports-diatom.git",
+	"if-test-helpers": "git+ssh://git@github.com:JudeCel/IF-Test-Helpers-Diatom.git",
 	"imagemagic": "git+ssh://git@github.com:rsms/node-imagemagick.git",
     "dateformat": "1.0.6-1.2.3",
     "joi": "~0.3.6",
@@ -22,7 +22,7 @@
     "q": "~0.9.7",
     "log4js-node-amqp": "~0.0.5",
 	"socket.io": "~0.9.16",
-	"string": "~1.8.1"
+    "string": "~1.8.1"
   },
   "devDependencies": {
     "tap": "~0.4.3",

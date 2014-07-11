@@ -3,20 +3,20 @@
 	"conflict": "drop existing",
 	"copyright": "2011 - 2014 ThirdWaveMedia Pty. Ltd.",
 	"port": "7777",
-	"domain": "localhost",
+	"domain": "yourvoice.insiderfocus.com",
 	"paths": {
 		"fsPath": "C:/InsiderFocus/ifs/",
-		"urlPath": "http://localhost:8888/",
+		"urlPath": "http://yourvoice.insiderfocus.com:8888/",
 		"serverPath": "server/",
 		"configPath": "config/",
 		"adminPath": "admin/",
 		"chatRoomPath": "chat_room/"
 	},
 	"mysql": {
-		"host": "dev01",
-		"port": 3306,
-		"user": "ifuser",
-		"password": "aaa",
-		"database": "if"
+        "host": "insiderfocus.cyujokxcbe0c.us-west-2.rds.amazonaws.com",
+        "port": 3306,
+        "user": "awsif",
+        "password": "awsifpass",
+        "database": "insiderfocus"
 	}
 }

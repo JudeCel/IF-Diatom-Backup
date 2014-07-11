@@ -5,7 +5,7 @@
 	"port": "7777",
 	"domain": "yourvoice.insiderfocus.com",
 	"paths": {
-		"fsPath": "C:/InsiderFocus/ifs/",
+		"fsPath": "C:/InsiderFocus/if-diatom-backup/",
 		"urlPath": "http://yourvoice.insiderfocus.com:7778/",
 		"serverPath": "server/",
 		"configPath": "config/",

@@ -1144,9 +1144,11 @@ function get_participant_colour($database, $ifs, $colours_used)
         "SELECT
           participant_colour_lookup.id
         FROM
-          participant_colour_lookup
+          participant_colour_lookup 
+        WHERE deleted is NULL 
         %s",
-        (!empty($colours_used) && is_array($colours_used) ? 'WHERE id NOT IN(' . $colours_query . ')' : '')
+        (!empty($colours_used) && is_array($colours_used) ? 'AND id NOT IN(' . $colours_query . ')' : '')
+       
     );
 
     $retColour = mysql_query($query_retColour, $ifs);

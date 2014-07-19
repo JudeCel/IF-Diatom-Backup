@@ -158,7 +158,7 @@ var onTopics = function(data) {
 			
 			if (!isEmpty(currentTopic.id)) {
 				window.topicID = currentTopic.id;
-				socket.emit('settopicid', window.topicID);
+				socket.emit('settopicid', window.topicID, false, window.userID);
 			}
             //moving from onParticipants.js
             var expandBillboard = document.getElementById("expandBillboard");

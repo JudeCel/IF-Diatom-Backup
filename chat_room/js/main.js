@@ -350,7 +350,7 @@ this.setTopic = function (id, initialTopicSet) {
     this.clearConsole();
     this.clearBillboard();
 
-    socket.emit('settopicid', topicID, initialTopicSet);
+    socket.emit('settopicid', topicID, initialTopicSet, userID);
 
 };
 

@@ -10,10 +10,6 @@ var onUpdateBillboard = function(user_id, topic_id, data) {
 			if (avatarJSON.name === participants[ndx].name) {
 				var now = new Date();
 
-				//avatar.say(data, now);
-				//window.lastBillboard.message = data.input;
-
-				//avatar.setEmotion(data.emotion);
 				avatar.draw();
 				avatar.highlight();
 

@@ -885,7 +885,9 @@ module.exports.listen = function (server) {
             }
         });
 
-        socket.on('settopicid', function (topic_id, initialTopicSet) {
+        socket.on('settopicid', function (topic_id, initialTopicSet, user_id) {
+	        if (user_id != socket.user_id) return;
+
             if (typeof initialTopicSet === "undefined") initialTopicSet = true;
 
             //	set the topic within our nameList
@@ -905,9 +907,6 @@ module.exports.listen = function (server) {
                 //	reply to the sender
                 socketHelper.createCustomEvent(socket.topic_id, socket.user_id, "settopic");
             }
-
-
-
 
 	        var req = expressValidatorStub({
 		        params: {
@@ -930,9 +929,6 @@ module.exports.listen = function (server) {
 		        if (err) return nextCb(err);
 		        getTopic.run(req, res, nextCb);
 	        });
-
-
-
         });
 
         socket.on('setavatarcaption', function (user_id, topic_id, caption) {

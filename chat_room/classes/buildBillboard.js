@@ -10,8 +10,10 @@ build.Billboard.prototype.processBillboard = function(data) {
 
 	data = JSON.parse(data);
 
-	var billboardText = document.getElementById("billboardText");
-	billboardText.innerHTML = data.description;
+	if(topicID == data.id){
+		var billboardText = document.getElementById("billboardText");
+		billboardText.innerHTML = data.description;
 
-	CKEDITOR.instances['billboardEditor'].setData(data.description);
+		CKEDITOR.instances['billboardEditor'].setData(data.description);
+	}
 }

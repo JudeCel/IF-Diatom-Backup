@@ -7,8 +7,8 @@ var im = require('imagemagick');
 var joi = require("joi");
 var dataHelper = require("../helpers/dataHelper.js");
 //use PATH for imagemagick instead set
-//im.convert.path = config.paths.convertPath;
-//im.identify.path = config.paths.identifyPath;
+im.convert.path = config.paths.convertPath;
+im.identify.path = config.paths.identifyPath;
 
 function saveResourceToDisk(params) {
     var req = params.req;
@@ -64,7 +64,24 @@ function saveResourceToDisk(params) {
                  if (params.width && params.height) {
 
                      im.identify(path, function(err, features) {
-                         if (err) {
+                         if (err)
+                            if(err.arguments!=null)
+                                im.identify(['-strip', path], function(err, features) {
+                                    if (err)
+                                        uploadResourceCallback({
+                                            name: filename,
+                                            matchName: json.filename,
+                                            type: params.type,
+                                            format: "png",
+                                            width: params.width,
+                                            height: params.height,
+                                            depth: 1
+                                        }, params.resCb);
+                                    else
+                                        stage2ofWriteFile(features);
+                                });
+                         else
+                         {
                              console.log("ERROR: Imagemagick is unable to identify this file type  "+err);
 
                              uploadResourceCallback({
@@ -77,7 +94,9 @@ function saveResourceToDisk(params) {
                                  depth: 1
                              }, params.resCb);
 
-                         } else {
+                         } else stage2ofWriteFile(features);
+                         function stage2ofWriteFile(features)
+                         {
 
                              if(features.width < params.width && features.height < params.height){
                                  params.width = features.width;

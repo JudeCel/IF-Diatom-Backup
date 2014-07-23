@@ -52,9 +52,14 @@ module.exports.getReportRowObjects = function (data, nextCb) {
         if (rowData.event){
             if(rowData.user_id == 0){
                 rowObject.isReply = false;
+                //rowData.event=rowData.event.replace(/<!--(.|\n)*-->/g,""); //didn't work. figure out why, and fix it- it'll improve performance.
+                while (rowData.event.indexOf("<!--")>-1)
+                    rowData.event=rowData.event.substr(0,rowData.event.indexOf("<!--")-1)+rowData.event.substr(rowData.event.indexOf("-->",rowData.event.indexOf("<!--"))+1);
                 var txt = S(rowData.event).stripTags().s;
                 rowObject.comment = S(txt).decodeHTMLEntities().s;
                 rowObject.date = new Date();
+                if (txt=='')
+                    continue;
             }else {
                 try {
                     rowEvent = JSON.parse(decodeURI(rowData.event), null);

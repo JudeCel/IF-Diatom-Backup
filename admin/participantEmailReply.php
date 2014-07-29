@@ -185,62 +185,92 @@ if ($valid) {
                 //Create user login for session
                 if ($participant_reply_id == 1) {
                     $user_login_id = create_user_logins($database_ifs, $ifs, $username, $default_password, $user_id);
+
+
+
+
+
+
+
+
+
+                    $participant_colour_lookup_id = get_participant_colour($database_ifs, $ifs, $colours_used);
+
+                    if ($participant_colour_lookup_id) {
+                        $colours_used[] = $participant_colour_lookup_id; //add used colour id to colour used array
+
+                        //Make sure there are no empty values
+                        if (!empty($colours_used)) {
+                            foreach ($colours_used as $key => $colour) {
+                                if (!$colour) {
+                                    unset($colours_used[$key]);
+                                }
+                            }
+                        }
+
+                        $colours_string = json_encode($colours_used);
+
+                        // set the color of the participant in the participants table
+                        $updateSQL = sprintf(
+                            "UPDATE
+                                participant_lists
+                            SET
+                                participant_colour_lookup_id = '%s',
+                                updated = '%s'%s
+                            WHERE
+                                id = %d",
+                            $participant_colour_lookup_id,
+                            $created,
+                            ($participant_reply_id == 1 ? ', ul_id=' . $user_login_id : ''),
+                            $participant_lists_id
+                        );
+
+                        mysql_select_db($database_ifs, $ifs);
+                        $Result = mysql_query($updateSQL, $ifs) or die(mysql_error());
+
+                        //Update the session to set what colours were used
+                        $colours_update_sql = sprintf(
+                            "UPDATE
+                                sessions
+                            SET
+                                colours_used = '%s'
+                            WHERE
+                                id = %d",
+                            $colours_string,
+                            $session_id
+                        );
+
+                        //Perform the update
+                        mysql_select_db($database_ifs, $ifs);
+                        mysql_query($colours_update_sql, $ifs);
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 } elseif ($participant_reply_id == 2) { //update reply id
 
                     build_participant_list($database_ifs, $ifs, $participant_lists_id, true, $participant_reply_id, $session_id);
                     $user_login_id = $existing_user_login_id;
                 }
 
-                $participant_colour_lookup_id = get_participant_colour($database_ifs, $ifs, $colours_used);
 
-                if ($participant_colour_lookup_id) {
-                    $colours_used[] = $participant_colour_lookup_id; //add used colour id to colour used array
 
-                    //Make sure there are no empty values
-                    if (!empty($colours_used)) {
-                        foreach ($colours_used as $key => $colour) {
-                            if (!$colour) {
-                                unset($colours_used[$key]);
-                            }
-                        }
-                    }
-
-                    $colours_string = json_encode($colours_used);
-
-                    // set the color of the participant in the participants table
-                    $updateSQL = sprintf(
-                        "UPDATE
-                            participant_lists
-                        SET
-                            participant_colour_lookup_id = '%s',
-                            updated = '%s'%s
-                        WHERE
-                            id = %d",
-                        $participant_colour_lookup_id,
-                        $created,
-                        ($participant_reply_id == 1 ? ', ul_id=' . $user_login_id : ''),
-                        $participant_lists_id
-                    );
-
-                    mysql_select_db($database_ifs, $ifs);
-                    $Result = mysql_query($updateSQL, $ifs) or die(mysql_error());
-
-                    //Update the session to set what colours were used
-                    $colours_update_sql = sprintf(
-                        "UPDATE
-                            sessions
-                        SET
-                            colours_used = '%s'
-                        WHERE
-                            id = %d",
-                        $colours_string,
-                        $session_id
-                    );
-
-                    //Perform the update
-                    mysql_select_db($database_ifs, $ifs);
-                    mysql_query($colours_update_sql, $ifs);
-                }
+                //this is where colors were assigned.
 
                 /* Update number of invites */
                 iterate_number_of_invites($database_ifs, $ifs, $user_id, $participant_reply_id, $invites);
@@ -372,27 +402,27 @@ if ($total_participants < 8 && $valid) {
             $content .= "<p>Sorry you're not able to join us on the " . $brand_name . " Insider team discussion.</p>";
         }
     } elseif ($participant_reply_id == 3 && !$reply_id) {
-        /* Find specific email template */
-        $retSessionEmail = retrieve_email_template($session_id, 3, $database_ifs, $ifs);
-        $row_retSessionEmail = mysql_fetch_assoc($retSessionEmail); //get email template
-        $totalRows_retSessionEmail = mysql_num_rows($retSessionEmail); //number of rows available
+                                                     /* Find specific email template */
+                                                     $retSessionEmail = retrieve_email_template($session_id, 3, $database_ifs, $ifs);
+                                                     $row_retSessionEmail = mysql_fetch_assoc($retSessionEmail); //get email template
+                                                     $totalRows_retSessionEmail = mysql_num_rows($retSessionEmail); //number of rows available
 
-        $to = $username;
-        $subject = $row_retSessionEmail['subject'];
+                                                     $to = $username;
+                                                     $subject = $row_retSessionEmail['subject'];
 
-        /* Get content for message */
-        $email_message = store_view_in_var(
-            'view-email-template.php',
-            array(
-                'session_id' => $session_id,
-                'email_type_id' => 3
-            )
-        );
+                                                     /* Get content for message */
+                                                     $email_message = store_view_in_var(
+                                                         'view-email-template.php',
+                                                         array(
+                                                             'session_id' => $session_id,
+                                                             'email_type_id' => 3
+                                                         )
+                                                     );
 
-        /* Parse Template for tags */
-        $email_message = parse_tags_for_template($email_message, $replacements);
+                                                     /* Parse Template for tags */
+                                                     $email_message = parse_tags_for_template($email_message, $replacements);
 
-        $from = "yourvoice@insiderfocus.com";
+                                                     $from = "yourvoice@insiderfocus.com";
 
         if (!sendMail($database_ifs, $ifs, $to, $name, $subject, $email_message, $from, $user_id)) {
             $content .= "<p>You're request could not be fulfilled. Please try again later.</p>";

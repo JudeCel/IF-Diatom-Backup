@@ -186,14 +186,6 @@ if ($valid) {
                 if ($participant_reply_id == 1) {
                     $user_login_id = create_user_logins($database_ifs, $ifs, $username, $default_password, $user_id);
 
-
-
-
-
-
-
-
-
                     $participant_colour_lookup_id = get_participant_colour($database_ifs, $ifs, $colours_used);
 
                     if ($participant_colour_lookup_id) {
@@ -245,33 +237,11 @@ if ($valid) {
                         mysql_query($colours_update_sql, $ifs);
                     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 } elseif ($participant_reply_id == 2) { //update reply id
 
                     build_participant_list($database_ifs, $ifs, $participant_lists_id, true, $participant_reply_id, $session_id);
                     $user_login_id = $existing_user_login_id;
                 }
-
-
-
-                //this is where colors were assigned.
-
                 /* Update number of invites */
                 iterate_number_of_invites($database_ifs, $ifs, $user_id, $participant_reply_id, $invites);
 

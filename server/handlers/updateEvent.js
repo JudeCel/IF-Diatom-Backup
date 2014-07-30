@@ -7,7 +7,7 @@ var webFaultHelper = require('../helpers/webFaultHelper.js');
 module.exports.validate = function (req, resCb) {
     var err = joi.validate(req.params, {
         id: joi.types.Number().required(),
-        user_id: joi.types.Number().required(),
+        user_id: joi.types.Number().optional(),
         topic_id: joi.types.Number().required(),
         reply_id: joi.types.Number().optional().nullOk(),
         cmd: joi.types.String().optional().nullOk(),

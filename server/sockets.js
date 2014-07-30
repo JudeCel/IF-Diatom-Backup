@@ -999,7 +999,6 @@ module.exports.listen = function (server) {
             var req = expressValidatorStub({
                 params: {
                     id: parseInt(json.id.replace(/\D/g, '')),
-                    user_id: socket.user_id,
                     topic_id: socket.topic_id,
                     tag: json.value
                 }

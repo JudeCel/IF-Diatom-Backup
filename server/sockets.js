@@ -419,7 +419,8 @@ module.exports.listen = function (server) {
 
             var req = expressValidatorStub({
                 params: {
-                    event_id: event_id
+                    event_id: event_id,
+                    updating_user_id: socket.user_id
                 }
             });
 

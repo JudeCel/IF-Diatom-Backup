@@ -12,7 +12,8 @@ var createUserVotes =  ifData.repositories.createUserVotes;
 
 module.exports.validate = function (req, next) {
     var err = joi.validate(req.params, {
-        event_id: joi.types.Number().required()
+        event_id: joi.types.Number().required(),
+        updating_user_id: joi.types.Number().required()
     });
 
     if (err) return next(webFaultHelper.getValidationFault(err.message));
@@ -23,51 +24,56 @@ module.exports.validate = function (req, next) {
 module.exports.run = function (req, res, mainCb) {
 	var topicId = 0;
 
-	getEvent(req.params.event_id)
-		.then(function (event) {
+	var tmp= getEvent(req.params.event_id);
+		tmp.then(function (event) {
 			if (!event) return;
 			topicId = event.topic_id;
-			getUserVotes(event.user_id, event.topic_id, req.params.event_id)
+			getUserVotes(req.params.updating_user_id, event.topic_id, req.params.event_id)
 				.then(function (userVotes) {
-					if (userVotes && userVotes.length > 0) return;
-					return getVotes(req.params.event_id);
+					if (userVotes && userVotes.length > 0) return "no votes";
+                    {
+                        var tmp=getVotes(req.params.event_id)
+                        return tmp;
+                    }
 				})
 				.then (function (votes) {
 					if (!votes || votes.length == 0) {
-						createVote({
+						return createVote({
 							event_id: req.params.event_id,
 							count: 1
 						})
 					}
+                    else if (votes=="no votes")
+                        return;
 					else {
 						updateVote({
-							id: votes[0].id,
-							count: votes[0].count + 1
+							id: votes.id,
+							count: votes.count + 1
 						});
 					}
-				})
-				.then(function(){
-					return getVotes({
-						event_id: req.params.event_id
-					})
-				})
-				.then (function(vote) {
-					if (vote) {
-						createUserVotes({
-							vote_id: vote.id,
-							user_id: req.params.user_id,
-							topic_id: topicId,
-							event_id: req.params.event_id
-						})
-						return vote.count;
-					}
-					return 0;
-				})
-				.done(function (votesCount) {
-					res.send(votesCount);
-				}, mainCb);
+				}).then(function(OneThing){
+                   return;
+                })
+				.done( function(Another,Pointless,Thing)
+                {
+                    var tmp= getVotes(req.params.event_id);
+                    tmp.then (function (votes) {
+                        if (votes) {
+                            createUserVotes({
+                                vote_id: votes.id,
+                                user_id: req.params.updating_user_id,
+                                topic_id: topicId,
+                                event_id: req.params.event_id
+                            })
+                            return votes.count;
+                        }
+                        return 0;
+                    }).done(function (votesCount) {
+                        res.send(votesCount);
+				    }, mainCb);
+                });
 		})
-		.done(function (votesCount) {
-			res.send();
-		}, mainCb);
+		/*.done(function (votesCount) {
+			res.send(); //serves no purpose whatsoever!
+		}, mainCb);*/
 };

@@ -24,17 +24,14 @@ module.exports.validate = function (req, next) {
 module.exports.run = function (req, res, mainCb) {
 	var topicId = 0;
 
-	var tmp= getEvent(req.params.event_id);
-		tmp.then(function (event) {
+        getEvent(req.params.event_id)
+            .then(function (event) {
 			if (!event) return;
 			topicId = event.topic_id;
 			getUserVotes(req.params.updating_user_id, event.topic_id, req.params.event_id)
 				.then(function (userVotes) {
 					if (userVotes && userVotes.length > 0) return "no votes";
-                    {
-                        var tmp=getVotes(req.params.event_id)
-                        return tmp;
-                    }
+                        return getVotes(req.params.event_id);
 				})
 				.then (function (votes) {
 					if (!votes || votes.length == 0) {
@@ -46,15 +43,13 @@ module.exports.run = function (req, res, mainCb) {
                     else if (votes=="no votes")
                         return;
 					else {
-						updateVote({
+						return updateVote({
 							id: votes.id,
 							count: votes.count + 1
 						});
 					}
-				}).then(function(OneThing){
-                   return;
-                })
-				.done( function(Another,Pointless,Thing)
+				})
+				.done( function()
                 {
                     var tmp= getVotes(req.params.event_id);
                     tmp.then (function (votes) {

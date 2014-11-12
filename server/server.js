@@ -45,6 +45,7 @@ module.exports = {
                 login: req.param("login"),
                 password:req.param("password")
             };
+
             require("./handlers/getUserLogin_byPassword.js").execute(params, function (data) {
                 res.send(data);
             }, function (err) {
@@ -259,6 +260,24 @@ module.exports = {
                 resCb: uploadResourceCallback
             });
         });
+
+	    app.get("/gaviota-api/trainer-home", function (req, res) {
+		    require("./handlers/getTrainerHomeSetup.js").run(req, res, function (data) {
+			    res.send(data);
+		    }, function (err) {
+			    throw err;
+		    });
+	    });
+
+	    app.get("/gaviota-api/session", function (req, res) {
+		    require("./handlers/getSessionInfo.js").run(req, res, function (data) {
+			    res.send(data);
+		    }, function (err) {
+			    throw err;
+		    });
+	    });
+
+
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
     close: function () {

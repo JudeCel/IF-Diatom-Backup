@@ -261,7 +261,7 @@ module.exports = {
             });
         });
 
-	    app.get("/gaviota-api/trainer-home", function (req, res) {
+	    app.get("/insiderfocus-api/admin-home", function (req, res) {
 		    require("./handlers/getTrainerHomeSetup.js").run(req, res, function (data) {
 			    res.send(data);
 		    }, function (err) {
@@ -269,7 +269,7 @@ module.exports = {
 		    });
 	    });
 
-	    app.get("/gaviota-api/session", function (req, res) {
+	    app.get("/insiderfocus-api/session", function (req, res) {
 		    require("./handlers/getSessionInfo.js").run(req, res, function (data) {
 			    res.send(data);
 		    }, function (err) {

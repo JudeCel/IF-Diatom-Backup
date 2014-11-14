@@ -12,8 +12,8 @@
 	"express-validator": "~0.3.2",
     "if-data": "git+ssh://git@github.com:JudeCel/IF-Data-Diatom.git",
     "if-common": "git+ssh://git@github.com:JudeCel/IF-Common-Diatom.git",
-	"if-reports": "git+ssh://git@github.com:JudeCel/IF-Reports-diatom.git",
-	"if-test-helpers": "git+ssh://git@github.com:JudeCel/IF-Test-Helpers-Diatom.git",
+	"if-reports": "git+ssh://git@github.com:JudeCel/IF-Reports-Diatom.git",
+	"if-test-helpers": "git+ssh://git@github.com:JudeCel/IF-TestHelpers-Diatom.git",
 	"imagemagic": "git+ssh://git@github.com:rsms/node-imagemagick.git",
     "dateformat": "1.0.6-1.2.3",
     "joi": "~0.3.6",
@@ -28,7 +28,6 @@
     "tap": "~0.4.3",
     "mockery": "~1.4.0",
     "grunt": "~0.4.1",
-    "grunt-node-tap": "git+ssh://git@github.com:JudeCel/grunt_node_tap_Diatom.git",
     "grunt-exec": "~0.4.1",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -40,13 +39,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Takhir/if-server.git"
+    "url": "git://github.com/JudeCel/IF-Diatom-Backup.git"
   },
   "private": true,
   "author": "InsiderFocus",
   "bugs": {
-    "url": "https://github.com/Takhir/if-server/issues"
+    "url": "https://github.com/JudeCel/IF-Diatom-Backup/issues"
   },
-  "homepage": "https://github.com/Takhir/if-server",
+  "homepage": "https://github.com/JudeCel/IF-Diatom-Backup",
   "license": "01"
 }

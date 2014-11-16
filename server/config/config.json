@@ -3,10 +3,10 @@
 	"conflict": "drop existing",
 	"copyright": "2011 - 2014 ThirdWaveMedia Pty. Ltd.",
 	"port": "7777",
-	"domain": "yourvoice.insiderfocus.com",
+	"domain": "localhost",
 	"paths": {
 		"fsPath": "C:/InsiderFocus/if-diatom-backup/",
-		"urlPath": "http://yourvoice.insiderfocus.com:7778/",
+		"urlPath": "localhost:7778/",
 		"serverPath": "server/",
 		"configPath": "config/",
 		"adminPath": "admin/",
@@ -15,10 +15,10 @@
         "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify"
 	},
 	"mysql": {
-		"host": "insiderfocus.cyujokxcbe0c.us-west-2.rds.amazonaws.com",
+		"host": "dev01",
 		"port": 3306,
-		"user": "awsif",
-		"password": "awsifpass",
-		"database": "insiderfocus"
+		"user": "ifuser",
+		"password": "aaa",
+		"database": "if"
 	}
 }

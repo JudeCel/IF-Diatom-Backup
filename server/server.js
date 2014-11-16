@@ -277,6 +277,22 @@ module.exports = {
 		    });
 	    });
 
+	    app.get("/insiderfocus-api/galleryTopics", function (req, res) {
+		    require("./handlers/getGalleryTopics.js").run(req, res, function (data) {
+			    res.send(data);
+		    }, function (err) {
+			    throw err;
+		    });
+	    });
+
+	    app.get("/insiderfocus-api/gallerySessionsPerTopic", function (req, res) {
+		    require("./handlers/getGallerySessionsPerTopic.js").run(req, res, function (data) {
+			    res.send(data);
+		    }, function (err) {
+			    throw err;
+		    });
+	    });
+
 
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },

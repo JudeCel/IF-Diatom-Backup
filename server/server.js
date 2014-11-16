@@ -286,6 +286,7 @@ module.exports = {
 	    });
 
 	    app.get("/insiderfocus-api/gallerySessionsPerTopic", function (req, res) {
+		    req.params = req.query;
 		    require("./handlers/getGallerySessionsPerTopic.js").run(req, res, function (data) {
 			    res.send(data);
 		    }, function (err) {

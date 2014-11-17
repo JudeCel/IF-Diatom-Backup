@@ -294,6 +294,14 @@ module.exports = {
 		    });
 	    });
 
+	    app.get("/insiderfocus-api/gallery", function (req, res) {
+		    require("./handlers/getGallery.js").run(req, res, function (data) {
+			    res.send(data);
+		    }, function (err) {
+			    throw err;
+		    });
+	    });
+
 
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },

@@ -16,7 +16,7 @@ var ifData = require('if-data'), db = ifData.db;
 var emailExists = ifData.repositories.emailExists;
 var addUsers = ifData.repositories.addUsers;
 //var getUserCapacity = ifData.repositories.getUserCapacity;
-//var urlHelper = require('../../helpers/urlHelper.js');
+var urlHelper = require('../../helpers/urlHelper.js');
 //var accountIsActive = require('../../repositories/account/accountIsActive.js');
 //var getCourseStatusInfo = require('../../repositories/course/getCourseStatusInfo.js');
 //var getCatalogCourseAccessInfo = require('../../repositories/catalog/getCatalogCourseAccessInfo.js');
@@ -107,11 +107,7 @@ module.exports = function (req, res, mainCb) {
 			req: req,
 			sessionId: sessionId
 		};
-//		if (!courseId)
-//			return res.redirect(urlHelper.getTraineeDashboardRedirectUrl(params));
-
-		//params.courseId = courseId;
-		return res.redirect(urlHelper.getCourseRedirectUrl(params));
+		return res.redirect(urlHelper.getAdminDashboardRedirectUrl(params));
 	}
 
 	function validate(cb) {

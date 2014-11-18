@@ -14,6 +14,10 @@
         "convertPath": "C:/Program Files/ImageMagick-6.8.9-Q16/convert",
         "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify"
 	},
+	"appUrls": {
+		"adminDashboard": ":3501/Admin/#/ManageProfile",
+		"urlEncryptVar": "_e"
+	},
 	"mysql": {
 		"host": "dev01",
 		"port": 3306,

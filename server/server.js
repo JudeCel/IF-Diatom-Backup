@@ -7,6 +7,7 @@ var log4js = require('log4js');
 var socketHelper = require('./socketHelper.js');
 var fs = require('fs');
 var url = require('url');
+//var layoutDataLoader = require('./helpers/layoutDataLoader');
 
 var stdLogger = log4js.getLogger('info');
 stdLogger.setLevel('INFO');
@@ -15,6 +16,12 @@ var server;
 module.exports = {
     run: function () {
         var app = express();
+
+	    app.set('view engine', 'ejs');
+	    app.set('views', __dirname + '/web');
+	    app.use(express.bodyParser());
+	    app.use(require('./helpers/sessionLoader'));
+
         server = app.listen(config.port);
         var io = require('./sockets.js').listen(server);
 
@@ -217,8 +224,8 @@ module.exports = {
             });
         });
 
-        app.use(express.bodyParser());
         app.use(express.favicon(__dirname + '/html/favicon.ico', { maxAge: 2592000000 }));
+	    //app.use(require('./helpers/sessionLoader'));        //TBD!!
 
         function uploadResourceCallback(user_id, json) {
             var foundUser = _.find(io.sockets.clients(), function (client) {
@@ -229,6 +236,18 @@ module.exports = {
                 foundUser.emit("fileuploadcomplete", json);
             }
         }
+
+	    function mapRoutes(verb, routes) {
+		    if (_.isArray(routes))
+			    routes = [routes];
+
+		    var handlers = _.rest(arguments, 2);
+
+		    _.each(routes, function (route) {
+			    var applyArgs = [route].concat(handlers);
+			    app[verb].apply(app, applyArgs);
+		    });
+	    }
 
         app.post('/uploadimage', function (req, res) {
             socketHelper.uploadResource({
@@ -302,9 +321,22 @@ module.exports = {
 		    });
 	    });
 
+//	    app.all("/register", function (req, res) {
+//		    require("./pages/register").run(req, res, function (data) {
+//			    res.send(data);
+//		    }, function (err) {
+//			    throw err;
+//		    });
+//	    });
 
+	    function routes() {
+		    mapRoutes('all', ['/register', '/registration.aspx'], require('./pages/register'));
+	    }
+
+	    routes();
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
+
     close: function () {
         server.close();
     }

@@ -89,12 +89,24 @@ function WebFaultHelper() {
 		return defaultErrorMessage;
 	}
 
+	function joiValidationFault(error) {
+		if (!error || !error._errors || error._errors.length === 0) return;
+		error._errors = _.map(error._errors, function (err) {
+			err.path = err.path.replace('.', '');  //Path is prefixed with a dot, remove it
+			err.message = error._object[err.path] === '' ? 'Required' : 'Invalid';
+			return err;
+		});
+
+		return _.zipObject(_.pluck(error._errors, 'path'), _.pluck(error._errors, 'message'));
+	}
+
 	return {
 		getFault: getFault,
 		getAuthFault: getAuthFault,
 		getDetailedAuthFault: getDetailedAuthFault,
 		getValidationFault: getValidationFault,
-		getErrorMessage: getErrorMessage
+		getErrorMessage: getErrorMessage,
+		joiValidationFault: joiValidationFault
 	};
 };
 module.exports = new WebFaultHelper();

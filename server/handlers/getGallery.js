@@ -20,6 +20,23 @@ module.exports.run = function (req, res, errCb) {
 			res.header('Access-Control-Allow-Origin', req.headers.origin);
 			res.header('Access-Control-Allow-Credentials', 'true');
 
+			data = [
+				{
+					id: 100,
+					name: "image pic",
+					type: 103000100
+				},
+				{
+					id: 101,
+					name: "video super",
+					type: 103000300
+				},
+				{
+					id: 102,
+					name: "audio file",
+					type: 103000400
+				}
+			];
 			res.send(data);
         }, function (err) {
             errCb(webFaultHelper.getFault(err));

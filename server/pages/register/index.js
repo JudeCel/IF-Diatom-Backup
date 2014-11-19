@@ -18,23 +18,12 @@ var addUsers = ifData.repositories.addUsers;
 //var getUserCapacity = ifData.repositories.getUserCapacity;
 var urlHelper = require('../../helpers/urlHelper.js');
 //var accountIsActive = require('../../repositories/account/accountIsActive.js');
-//var getCourseStatusInfo = require('../../repositories/course/getCourseStatusInfo.js');
-//var getCatalogCourseAccessInfo = require('../../repositories/catalog/getCatalogCourseAccessInfo.js');
 //var logout = require('../../helpers/logout.js');
 
 var userFields = ['email', 'name_first', 'name_last', 'password'];
 
 module.exports = function (req, res, mainCb) {
 	var accountId = res.locals.accountId;
-	//var courseId = urlHelper.getCourseId(req);
-	//var catalogId = urlHelper.getCatalogId(req);
-
-//	if(catalogId && !res.locals.hasFeature(mtypes.featureEntry.courseCatalog)) {
-//		return res.redirect(urlHelper.getCurrentHostUrl(req));
-//	}
-
-//	if (!courseId)
-//		return logout(res);
 
 	var data = _.extend({
 		name_first: '',
@@ -164,7 +153,6 @@ module.exports = function (req, res, mainCb) {
 		var userToAdd = _.pick(data, userFields);
 		//userToAdd.status = mtypes.userStatus.active;
 		//userToAdd.permissions = mtypes.userPermissions.trainee;
-		//userToAdd.name = userToAdd.firstName + ' ' + userToAdd.lastName;
 
 		addUsers({
 			users: [userToAdd]

@@ -16,10 +16,6 @@ module.exports.validate = function (req, resCb) {
 module.exports.run = function (req, res, errCb) {
 	getGallerySessionsPerTopic(req.params)
         .done(function (data) {
-			// TEMPORARY!
-			res.header('Access-Control-Allow-Origin', req.headers.origin);
-			res.header('Access-Control-Allow-Credentials', 'true');
-
 			res.send(data);
         }, function (err) {
             errCb(webFaultHelper.getFault(err));

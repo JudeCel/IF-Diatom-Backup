@@ -17,6 +17,10 @@ module.exports = {
     run: function () {
         var app = express();
 
+	    app.use(require('./helpers/headers/poweredByHeader.js'));
+	    app.use(require('./helpers/headers/noCacheHeaders.js'));
+	    app.use(require('./helpers/headers/corsResponse.js'));
+
 	    app.set('view engine', 'ejs');
 	    app.set('views', __dirname + '/web');
 	    app.use(express.bodyParser());

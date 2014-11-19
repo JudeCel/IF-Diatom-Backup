@@ -24,10 +24,6 @@ module.exports.run = function (req, res, mainCb) {
 	async.parallel({
 		accountInfo: getAccountInfo
 	}, function (err, results) {
-
-		res.header('Access-Control-Allow-Origin', req.headers.origin);
-		res.header('Access-Control-Allow-Credentials', 'true');
-
 		//if (err) return mainCb(webFaultHelper.getFault(err));
 		//var ret = _.extend({}, req.locals, results);
 

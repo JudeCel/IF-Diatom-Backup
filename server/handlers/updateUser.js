@@ -4,16 +4,16 @@ var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 var Q = require('q');
 
-module.exports.validate = function (req, resCb) {
+module.exports.validate = function (req, res, next) {
     var err = joi.validate(req.params, {
         id: joi.types.Number().required(),
         avatar_info: joi.types.String().required()
     });
 
     if (err)
-        return resCb(webFaultHelper.getValidationFault(err.message));
+        return next(webFaultHelper.getValidationFault(err.message));
 
-    resCb();
+    next();
 };
 
 module.exports.run = function (req, resCb, errCb) {

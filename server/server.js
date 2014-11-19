@@ -296,6 +296,10 @@ module.exports = {
 	    app.get('/insiderfocus-api/galleryTopics', handle('getGalleryTopics'));
 	    app.get('/insiderfocus-api/session', handle('getSessionInfo'));
 
+        app.get('/insiderfocus-api/userProfile', handle('getUser'));
+        app.post('/insiderfocus-api/userProfile', handle('updateUserV2'));
+        app.get('/insiderfocus-api/countryLookup', handle('getCountries'));
+
 	    routes();
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },

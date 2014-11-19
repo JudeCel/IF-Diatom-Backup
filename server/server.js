@@ -7,6 +7,7 @@ var log4js = require('log4js');
 var socketHelper = require('./socketHelper.js');
 var fs = require('fs');
 var url = require('url');
+var handlerInterceptor = require('./helpers/handlerInterceptor.js');
 //var layoutDataLoader = require('./helpers/layoutDataLoader');
 
 var stdLogger = log4js.getLogger('info');
@@ -15,6 +16,8 @@ stdLogger.setLevel('INFO');
 var server;
 module.exports = {
     run: function () {
+	    var handle = handlerInterceptor.handle;
+
         var app = express();
 
 	    app.use(require('./helpers/headers/poweredByHeader.js'));
@@ -284,58 +287,14 @@ module.exports = {
             });
         });
 
-	    app.get("/insiderfocus-api/admin-home", function (req, res) {
-		    require("./handlers/getTrainerHomeSetup.js").run(req, res, function (data) {
-			    res.send(data);
-		    }, function (err) {
-			    throw err;
-		    });
-	    });
-
-	    app.get("/insiderfocus-api/session", function (req, res) {
-		    require("./handlers/getSessionInfo.js").run(req, res, function (data) {
-			    res.send(data);
-		    }, function (err) {
-			    throw err;
-		    });
-	    });
-
-	    app.get("/insiderfocus-api/galleryTopics", function (req, res) {
-		    require("./handlers/getGalleryTopics.js").run(req, res, function (data) {
-			    res.send(data);
-		    }, function (err) {
-			    throw err;
-		    });
-	    });
-
-	    app.get("/insiderfocus-api/gallerySessionsPerTopic", function (req, res) {
-		    req.params = req.query;
-		    require("./handlers/getGallerySessionsPerTopic.js").run(req, res, function (data) {
-			    res.send(data);
-		    }, function (err) {
-			    throw err;
-		    });
-	    });
-
-	    app.get("/insiderfocus-api/gallery", function (req, res) {
-		    require("./handlers/getGallery.js").run(req, res, function (data) {
-			    res.send(data);
-		    }, function (err) {
-			    throw err;
-		    });
-	    });
-
-//	    app.all("/register", function (req, res) {
-//		    require("./pages/register").run(req, res, function (data) {
-//			    res.send(data);
-//		    }, function (err) {
-//			    throw err;
-//		    });
-//	    });
-
 	    function routes() {
 		    mapRoutes('all', ['/register', '/registration.aspx'], require('./pages/register'));
 	    }
+
+	    app.get('/insiderfocus-api/gallery', handle('getGallery'));
+	    app.get('/insiderfocus-api/gallerySessionsPerTopic', handle('getGallerySessionsPerTopic'));
+	    app.get('/insiderfocus-api/galleryTopics', handle('getGalleryTopics'));
+	    app.get('/insiderfocus-api/session', handle('getSessionInfo'));
 
 	    routes();
         //console.log('Listening for HTTP requests on port ' + app.get('port'));

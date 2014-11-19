@@ -3,14 +3,14 @@ var getGallerySessionsPerTopic = require('if-data').repositories.getGallerySessi
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 var joi = require('joi');
 
-module.exports.validate = function (req, resCb) {
+module.exports.validate = function (req, res, next) {
 	var err =joi.validate(req.params, {
 		topic_id: joi.types.Number().required()
 	});
 	if (err)
-		return resCb(webFaultHelper.getValidationFault(err.message));
+		return next(webFaultHelper.getValidationFault(err.message));
 
-    resCb();
+	next();
 };
 
 module.exports.run = function (req, res, errCb) {

@@ -17,7 +17,22 @@ module.exports.validate = function (req, res, next) {
 module.exports.run = function (req, resCb, errCb) {
     getUser(req.query)
         .done(function (data) {
-            resCb.send(data);
+            var user = {};
+            user.id = data.id;
+            user.name_first  =  data.name_first;
+            user.name_last  =  data.name_last;
+            user.gender = data.gender;
+            user.email  = data.email;
+            user.address  = data.address;
+            user.phone  = data.phone;
+            user.mobile  = data.mobile;
+            user.state = data.state;
+            user.country_id = data.country_id;
+            user.city = data.city;
+            user.code = data.code;
+            user.company = data.company;
+
+            resCb.send(user);
         }, function (err) {
             errCb(webFaultHelper.getFault(err));
         });

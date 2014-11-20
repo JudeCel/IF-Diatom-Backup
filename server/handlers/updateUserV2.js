@@ -4,6 +4,7 @@ var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 
 module.exports.validate = function (req, res, next) {
+
     var params = {
         id: req.param("id"),
         name_first: req.param("name_first"),
@@ -25,8 +26,10 @@ module.exports.validate = function (req, res, next) {
         gender: joi.types.String().required(),
         email: joi.types.String().email().required(),
         address: joi.types.String().optional().allow('').nullOk(),
+        phone: joi.types.String().optional().allow('').nullOk(),
+        mobile: joi.types.String().optional().allow('').nullOk(),
         state:  joi.types.String().optional().allow('').nullOk(),
-        country_id: joi.types.Number().allow('').optional(),
+        country_id: joi.types.Number().optional().nullOk(),
         city: joi.types.String().optional().allow('').nullOk(),
         code: joi.types.String().optional().allow('').nullOk(),
         company: joi.types.String().optional().allow('').nullOk()
@@ -46,6 +49,8 @@ module.exports.run = function (req, resCb, errCb) {
         gender: req.body.gender,
         email: req.body.email,
         address: req.body.address,
+        phone: req.body.phone,
+        mobile: req.body.mobile,
         state: req.body.state,
         country_id: req.body.country_id,
         city: req.body.city,

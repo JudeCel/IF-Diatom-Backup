@@ -15,6 +15,7 @@
     "if-common": "git+ssh://git@github.com:JudeCel/IF-Common-Diatom.git",
 	"if-reports": "git+ssh://git@github.com:JudeCel/IF-Reports-Diatom.git",
 	"if-test-helpers": "git+ssh://git@github.com:JudeCel/IF-TestHelpers-Diatom.git",
+	"if-auth-diatom": "git+ssh://git@github.com:JudeCel/IF-Auth-Diatom.git",
 	"imagemagic": "git+ssh://git@github.com:rsms/node-imagemagick.git",
     "dateformat": "1.0.6-1.2.3",
     "joi": "~0.3.6",

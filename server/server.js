@@ -17,6 +17,7 @@ var server;
 module.exports = {
     run: function () {
 	    var handle = handlerInterceptor.handle;
+	    var accountManager = handlerInterceptor.accountManager;
 
         var app = express();
 
@@ -24,12 +25,7 @@ module.exports = {
 	    app.use(require('./helpers/headers/noCacheHeaders.js'));
 	    app.use(require('./helpers/headers/corsResponse.js'));
 
-	    app.set('view engine', 'ejs');
-	    app.set('views', __dirname + '/web');
-	    app.use(express.bodyParser());
-	    app.use(require('./helpers/sessionLoader'));
-
-        server = app.listen(config.port);
+	    server = app.listen(config.port);
         var io = require('./sockets.js').listen(server);
 
         io.configure(function () {
@@ -232,7 +228,6 @@ module.exports = {
         });
 
         app.use(express.favicon(__dirname + '/html/favicon.ico', { maxAge: 2592000000 }));
-	    //app.use(require('./helpers/sessionLoader'));        //TBD!!
 
         function uploadResourceCallback(user_id, json) {
             var foundUser = _.find(io.sockets.clients(), function (client) {
@@ -243,18 +238,6 @@ module.exports = {
                 foundUser.emit("fileuploadcomplete", json);
             }
         }
-
-	    function mapRoutes(verb, routes) {
-		    if (_.isArray(routes))
-			    routes = [routes];
-
-		    var handlers = _.rest(arguments, 2);
-
-		    _.each(routes, function (route) {
-			    var applyArgs = [route].concat(handlers);
-			    app[verb].apply(app, applyArgs);
-		    });
-	    }
 
         app.post('/uploadimage', function (req, res) {
             socketHelper.uploadResource({
@@ -287,9 +270,10 @@ module.exports = {
             });
         });
 
-	    function routes() {
-		    mapRoutes('all', ['/register', '/registration.aspx'], require('./pages/register'));
-	    }
+	    app.get('/insiderfocus-api/gallery', accountManager('getGallery'));
+	    app.get('/insiderfocus-api/gallerySessionsPerTopic', accountManager('getGallerySessionsPerTopic'));
+	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
+	    app.get('/insiderfocus-api/account', accountManager('getAccountInfo'));
 
 	    app.get('/insiderfocus-api/gallery', handle('getGallery'));
 	    app.get('/insiderfocus-api/gallerySessionsPerTopic', handle('getGallerySessionsPerTopic'));

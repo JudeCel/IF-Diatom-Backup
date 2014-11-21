@@ -16,7 +16,6 @@ stdLogger.setLevel('INFO');
 var server;
 module.exports = {
     run: function () {
-	    var handle = handlerInterceptor.handle;
 	    var accountManager = handlerInterceptor.accountManager;
 
         var app = express();
@@ -275,16 +274,15 @@ module.exports = {
 	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
 	    app.get('/insiderfocus-api/account', accountManager('getAccountInfo'));
 
-	    app.get('/insiderfocus-api/gallery', handle('getGallery'));
-	    app.get('/insiderfocus-api/gallerySessionsPerTopic', handle('getGallerySessionsPerTopic'));
-	    app.get('/insiderfocus-api/galleryTopics', handle('getGalleryTopics'));
-	    app.get('/insiderfocus-api/session', handle('getSessionInfo'));
+	    app.get('/insiderfocus-api/gallery', accountManager('getGallery'));
+	    app.get('/insiderfocus-api/gallerySessionsPerTopic', accountManager('getGallerySessionsPerTopic'));
+	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
+	    app.get('/insiderfocus-api/session', accountManager('getSessionInfo'));
 
-        app.get('/insiderfocus-api/userProfile', handle('getUser'));
-        app.post('/insiderfocus-api/userProfile', handle('updateUserV2'));
-        app.get('/insiderfocus-api/countryLookup', handle('getCountries'));
+        app.get('/insiderfocus-api/userProfile', accountManager('getUser'));
+        app.post('/insiderfocus-api/userProfile', accountManager('updateUserV2'));
+        app.get('/insiderfocus-api/countryLookup', accountManager('getCountries'));
 
-	    routes();
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
 

@@ -8,6 +8,7 @@ var socketHelper = require('./socketHelper.js');
 var fs = require('fs');
 var url = require('url');
 var handlerInterceptor = require('./helpers/handlerInterceptor.js');
+//var errorHandler = require('./helpers/errorHandler.js');
 //var layoutDataLoader = require('./helpers/layoutDataLoader');
 
 var stdLogger = log4js.getLogger('info');
@@ -20,9 +21,15 @@ module.exports = {
 
         var app = express();
 
+	    app.use(express.compress());
 	    app.use(require('./helpers/headers/poweredByHeader.js'));
 	    app.use(require('./helpers/headers/noCacheHeaders.js'));
 	    app.use(require('./helpers/headers/corsResponse.js'));
+	    app.use(log4js.connectLogger(stdLogger, {level: log4js.levels.INFO, format: 'express>>:remote-addr|:response-time|:method|:url|:http-version|:status|:referrer|:user-agent'}));
+	    app.use(express.bodyParser());
+
+	    app.use(app.router);
+	    app.use(require('./helpers/errorHandler.js'));
 
 	    server = app.listen(config.port);
         var io = require('./sockets.js').listen(server);

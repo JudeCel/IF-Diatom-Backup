@@ -1,7 +1,6 @@
 "use strict";
-var getSession = require('if-data').repositories.getSession;
+var getSessionAndTopics = require('if-data').repositories.getSessionAndTopics;
 var createSession = require('if-data').repositories.createSession;
-var getTopics = require('if-data').repositories.getTopics;
 var createTopic = require('if-data').repositories.createTopic;
 
 var joi = require('joi');
@@ -18,23 +17,23 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-    getSession(req.query)
-        .then(function (session) {
-            session.name = session.name +"_Copy";
-            return createSession(session);
+     var session = {};
+     var topics = {};
+     getSessionAndTopics({ sessionId: 122})
+        .then(function (data) {
+            session = data.session;
+            topics = data.topics;
+            data.session.name = data.session.name +"_Copy";
+            data.session.accountId = req.locals.accountId;
+            return createSession(data.session);
         })
         .then(function (sessionCopy) {
-            return getTopics({session_id:req.params.sessionId})
+            _.each(topics, function(topic) {
+                topic.session_id = sessionCopy.id;
+            });
+            return createTopic(topics);
         })
-        .then(function (topics) {
-            console.log(topics);
-            //async.each(topics, function (topic, next) {
-            //    topic.session_id =  sessionCopy.id;  
-            //    createTopic(topic, next);
-            //}, callback);
-        })  
-        .done(function (data) {
-           // console.log(data);
+        .done(function (result) {
             resCb.send();
-        }, errCb);
+        }, errCb);  
 };

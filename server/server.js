@@ -1,15 +1,12 @@
 "use strict";
 var _ = require('lodash');
 var express = require('express');
-//var config = require('simpler-config');        TBD use this
-var config = require('simpler-config').load(require('./config/config.json'));       // TBD use just require(), no load()
+var config = require('simpler-config');        //TBD use this
 var log4js = require('log4js');
 var socketHelper = require('./socketHelper.js');
 var fs = require('fs');
 var url = require('url');
 var handlerInterceptor = require('./helpers/handlerInterceptor.js');
-//var errorHandler = require('./helpers/errorHandler.js');
-//var layoutDataLoader = require('./helpers/layoutDataLoader');
 
 var stdLogger = log4js.getLogger('info');
 stdLogger.setLevel('INFO');
@@ -295,7 +292,7 @@ module.exports = {
 
         app.delete('/insiderfocus-api/dropSession', accountManager('deleteSession'));
         app.get('/insiderfocus-api/copySession', accountManager('copySession'));
-        app.get("/insiderfocus-api/getSessionDataForGrid", accountManager('getSessionDataForGridV2'));
+        app.get("/insiderfocus-api/getSessions", accountManager('getSessions'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
 

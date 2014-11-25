@@ -293,6 +293,8 @@ module.exports = {
         app.delete('/insiderfocus-api/dropSession', accountManager('deleteSession'));
         app.get('/insiderfocus-api/copySession', accountManager('copySession'));
         app.get("/insiderfocus-api/getSessions", accountManager('getSessions'));
+
+	    app.post("/insiderfocus-api/createSession", accountManager('createSession2'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
 

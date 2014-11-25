@@ -293,6 +293,9 @@ module.exports = {
         app.post('/insiderfocus-api/userProfile', accountManager('updateUserV2'));
         app.get('/insiderfocus-api/countryLookup', accountManager('getCountries'));
 
+        app.delete('/insiderfocus-api/dropSession', accountManager('deleteSession'));
+        app.get('/insiderfocus-api/copySession', accountManager('copySession'));
+        app.get("/insiderfocus-api/getSessionDataForGrid", accountManager('getSessionDataForGridV2'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
 

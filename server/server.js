@@ -274,6 +274,10 @@ module.exports = {
             });
         });
 
+	    /*Browser session, for authentication stuff, do not change it please*/
+	    app.post('/insiderfocus-api/session/expire', everyone('expireSession'));
+	    /**/
+
 	    app.get('/insiderfocus-api/gallery', accountManager('getGallery'));
 	    app.get('/insiderfocus-api/gallerySessionsPerTopic', accountManager('getGallerySessionsPerTopic'));
 	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
@@ -282,9 +286,6 @@ module.exports = {
 	    app.get('/insiderfocus-api/gallery', accountManager('getGallery'));
 	    app.get('/insiderfocus-api/gallerySessionsPerTopic', accountManager('getGallerySessionsPerTopic'));
 	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
-
-	    app.get('/insiderfocus-api/session', accountManager('getSessionInfo'));
-	    app.post('/insiderfocus-api/session/expire', everyone('expireSession'));
 
         app.get('/insiderfocus-api/userProfile', accountManager('getUser'));
         app.post('/insiderfocus-api/userProfile', accountManager('updateUserV2'));

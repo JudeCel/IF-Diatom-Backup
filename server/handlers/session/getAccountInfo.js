@@ -30,7 +30,7 @@ module.exports.run = function (req, res, mainCb) {
 
 	function getAccountInfo(accountId, cb) {
 		var sql = "SELECT \
-			a.pricingType, \
+			a.status, \
 			a.trialExpiration, \
 			UNIX_TIMESTAMP(a.cancellationDate) * 1000 cancellationDate,\
 			a.ownerEmail \

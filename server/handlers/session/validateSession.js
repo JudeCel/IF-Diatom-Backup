@@ -18,13 +18,13 @@ module.exports.registeredUser = function (req, res, mainCb) {
 };
 
 module.exports.accountManager = function (req, res, mainCb) {
-	return getSession({permissions: [
-		mtypes.userPermissions.accountManager
+	return getSession({userType: [
+		mtypes.userType.accountManager
 	]}, req, res, mainCb);
 };
 
 module.exports.trainer = function (req, res, mainCb) {
-	return getSession({permissions: mtypes.userPermissions.trainer}, req, res, mainCb);
+	return getSession({userType: mtypes.userType.regular}, req, res, mainCb);
 };
 
 function getSessionFromHeader(req) {
@@ -50,19 +50,16 @@ function getSessionFromHeader(req) {
 function getSession(options, req, res, mainCb) {
 	delete req.session;
 	options = options || {};
-	var permissions = options.permissions;
+	var userType = options.userType;
 	var sessTypes = options.sessTypes;
 
 	var sessionId = getSessionFromHeader(req);
 	if(!sessionId)
 		return mainCb(webFaultHelper.getAuthFault());
 
-	if (permissions && !_.isArray(permissions))
-		permissions = [permissions];
-
 	ifAuth.validateSession({
 		sessionId: sessionId,
-		permissions: permissions,
+		userType: userType,
 		sessionInactivityExpirationMinutes: config.sessionInactivityExpirationMinutes,
 		sessTypes: sessTypes
 	}, function (err, sessResult) {

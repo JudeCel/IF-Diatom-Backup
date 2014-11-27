@@ -295,7 +295,7 @@ module.exports = {
         app.get('/insiderfocus-api/copySession', accountManager('copySession'));
         app.get("/insiderfocus-api/getSessions", accountManager('getSessions'));
 
-	    app.post("/insiderfocus-api/createSession", accountManager('createSession2'));
+	    app.post("/insiderfocus-api/createSession", accountManager('createSession'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },
 

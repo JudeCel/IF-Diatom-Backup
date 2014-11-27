@@ -2,24 +2,25 @@
 var getSessionAndTopics = require('if-data').repositories.getSessionAndTopics;
 var createSession = require('if-data').repositories.createSession;
 var createTopic = require('if-data').repositories.createTopic;
-
+var _ = require('lodash');
 var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 
-module.exports.validate = function (req, res, next) {
-    var params = { sessionId: req.param("sessionId") };
-    var err = joi.validate(params, {
+module.exports.validate = function (req, res, next) {   
+    var err = joi.validate(req.query, {
         sessionId: joi.types.Number().required()
     });
+
     if (err)
         return  next(webFaultHelper.getValidationFault(err.message));
-     next();
+    next();
 };
 
 module.exports.run = function (req, resCb, errCb) {
-     var session = {};
-     var topics = {};
-     getSessionAndTopics({ sessionId: 122})
+    var session = {};
+    var topics = {};
+    var sessionCopyId = 0;
+    getSessionAndTopics(req.query)
         .then(function (data) {
             session = data.session;
             topics = data.topics;
@@ -31,9 +32,13 @@ module.exports.run = function (req, resCb, errCb) {
             _.each(topics, function(topic) {
                 topic.session_id = sessionCopy.id;
             });
+            sessionCopyId = sessionCopy.id;
             return createTopic(topics);
         })
         .done(function (result) {
-            resCb.send();
+            resCb.send({
+                sessionCopyId: sessionCopyId,
+                topics: topics
+            });
         }, errCb);  
 };

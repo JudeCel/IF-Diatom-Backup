@@ -19,25 +19,25 @@ module.exports.validate = function (req, res, next) {
 module.exports.run = function (req, resCb, errCb) {
     var session = {};
     var topics = {};
-    var sessionCopyId = 0;
     getSessionAndTopics(req.query)
         .then(function (data) {
-            session = data.session;
-            topics = data.topics;
+            topics  = data.topics;
             data.session.name = data.session.name +"_Copy";
             data.session.accountId = req.locals.accountId;
             return createSession(data.session);
         })
         .then(function (sessionCopy) {
+            session = sessionCopy;
+
             _.each(topics, function(topic) {
                 topic.session_id = sessionCopy.id;
             });
-            sessionCopyId = sessionCopy.id;
             return createTopic(topics);
         })
         .done(function (result) {
+           
             resCb.send({
-                sessionCopyId: sessionCopyId,
+                session: session,
                 topics: topics
             });
         }, errCb);  

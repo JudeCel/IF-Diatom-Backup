@@ -7,10 +7,8 @@ var webFaultHelper = require('../helpers/webFaultHelper.js');
 
 module.exports.validate = function (req, res, next) {
     
-    var params = { sessionId: req.param("sessionId") };
-
-    var err = joi.validate(params, {
-        sessionId: joi.types.Number().required()
+    var err = joi.validate(req.query, {
+      sessionId: joi.types.Number().required()
     });
 
     if (err)
@@ -19,10 +17,19 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
+  
+    var session = {};
+    var topics = {};
+
     deleteSession(req.query)
-      .then(deleteSessionTopics(req.query))
-      .done(function (resObj) {
-          console.log(resObj);
-          resCb.send();
+      .then(function (data) {
+        session = data;
+        return deleteSessionTopics(req.query);
+      })
+      .done(function (data) {
+          resCb.send({
+            session: session,
+            topics: data
+          });
       }, errCb);
 };

@@ -17,9 +17,11 @@ module.exports.run = function (req, res, mainCb) {
 
 	async.parallel({
 		users: getUsers,
-		contactLists: getContactLists
+		contactLists: getContactLists,
+		defaultContactLists: getDefaultContactLists
 	}, function (err, results) {
 		if (err) return mainCb(webFaultHelper.getFault(err));
+		results.contactLists = results.defaultContactLists.concat(results.contactLists);
 		res.send(results);
 	});
 
@@ -43,6 +45,28 @@ module.exports.run = function (req, res, mainCb) {
 		ORDER BY cl.Name ASC;";
 
 		db.query(query, [req.locals.accountId, allowedContactLists], function (err, res) {
+			if (err) return cb(err);
+			_.each(res, function(contactList) {
+				contactList.userIds = contactList.userIds ? arrayHelper.strArrayToIntArray(contactList.userIds.split(',')) : [];
+			});
+			cb(null, res);
+		});
+	}
+
+	function getDefaultContactLists(cb) {
+		var query = "SELECT \
+			m.ID, \
+			m.Name, \
+			m.ID as Type, \
+			GROUP_CONCAT(u.id SEPARATOR ',') userIds \
+			FROM mtype m \
+			LEFT JOIN userrole ur ON m.ID = ur.roleId \
+			LEFT JOIN users u ON ur.userId = u.ID AND u.Deleted IS NULL \
+			WHERE u.AccountID = ? \
+			GROUP BY m.ID \
+			ORDER BY m.Name ASC";
+
+		db.query(query, [req.locals.accountId], function (err, res) {
 			if (err) return cb(err);
 			_.each(res, function(contactList) {
 				contactList.userIds = contactList.userIds ? arrayHelper.strArrayToIntArray(contactList.userIds.split(',')) : [];

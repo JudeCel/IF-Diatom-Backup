@@ -287,6 +287,10 @@ module.exports = {
 	    app.get('/insiderfocus-api/gallerySessionsPerTopic', accountManager('getGallerySessionsPerTopic'));
 	    app.get('/insiderfocus-api/galleryTopics', accountManager('getGalleryTopics'));
 
+        app.post('/insiderfocus-api/addUser', accountManager('addUser'));
+        app.delete('/insiderfocus-api/dropUser', accountManager('deleteUser'));
+        app.get('/insiderfocus-api/getUsers', accountManager('getUsers'));
+
         app.get('/insiderfocus-api/userProfile', accountManager('getUser'));
         app.post('/insiderfocus-api/userProfile', accountManager('updateUserV2'));
         app.get('/insiderfocus-api/countryLookup', accountManager('getCountries'));

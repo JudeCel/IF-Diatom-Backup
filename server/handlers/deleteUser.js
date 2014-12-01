@@ -1,6 +1,5 @@
 "use strict";
-var deleteSession = require('if-data').repositories.deleteSession;
-var deleteSessionTopics = require('if-data').repositories.deleteSessionTopics;
+//var deleteUser = require('if-data').repositories.deleteUser;
 
 var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
@@ -8,7 +7,7 @@ var webFaultHelper = require('../helpers/webFaultHelper.js');
 module.exports.validate = function (req, res, next) {
     
     var err = joi.validate(req.query, {
-      sessionId: joi.types.Number().required()
+      userId: joi.types.Number().required()
     });
 
     if (err)
@@ -17,12 +16,14 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-
-    deleteSession(req.query)
+  resCb.send();
+  /*
+    deleteUser(req.query)
       .then(function (data) {
         return deleteSessionTopics(req.query);
       })
       .done(function (data) {
           resCb.send();
       }, errCb);
+*/
 };

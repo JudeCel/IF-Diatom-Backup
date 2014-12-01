@@ -18,13 +18,9 @@ module.exports.registeredUser = function (req, res, mainCb) {
 };
 
 module.exports.accountManager = function (req, res, mainCb) {
-	return getSession({userType: [
+	return getSession({userRole: [
 		mtypes.userRole.accountManager
 	]}, req, res, mainCb);
-};
-
-module.exports.trainer = function (req, res, mainCb) {
-	return getSession({userType: mtypes.userType.regular}, req, res, mainCb);
 };
 
 function getSessionFromHeader(req) {
@@ -50,7 +46,7 @@ function getSessionFromHeader(req) {
 function getSession(options, req, res, mainCb) {
 	delete req.session;
 	options = options || {};
-	var userType = options.userType;
+	var userRole = options.userRole;
 	var sessTypes = options.sessTypes;
 
 	var sessionId = getSessionFromHeader(req);
@@ -59,7 +55,7 @@ function getSession(options, req, res, mainCb) {
 
 	ifAuth.validateSession({
 		sessionId: sessionId,
-		userType: userType,
+		userRole: userRole,
 		sessionInactivityExpirationMinutes: config.sessionInactivityExpirationMinutes,
 		sessTypes: sessTypes
 	}, function (err, sessResult) {

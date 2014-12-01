@@ -19,7 +19,7 @@ module.exports.registeredUser = function (req, res, mainCb) {
 
 module.exports.accountManager = function (req, res, mainCb) {
 	return getSession({userType: [
-		mtypes.userType.accountManager
+		mtypes.userRole.accountManager
 	]}, req, res, mainCb);
 };
 

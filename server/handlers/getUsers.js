@@ -1,9 +1,8 @@
 "use strict";
 
-var getUsers = require('if-data').repositories.getUsers;
+var getUsers = require('if-data').repositories.getUsersList;
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 var joi = require('joi');
-var mtypes = require('if-common').mtypes;
 
 module.exports.validate = function (req, res, next) {
     next();
@@ -12,6 +11,7 @@ module.exports.validate = function (req, res, next) {
 module.exports.run = function (req, resCb, errCb) {
 	getUsers(req.locals.accountId)
         .done(function (data) {
+            console.log(data);
             resCb.send(data);
         }, function (err) {
             errCb(webFaultHelper.getFault(err));

@@ -17,13 +17,4 @@ module.exports.validate = function (req, res, next) {
 
 module.exports.run = function (req, resCb, errCb) {
   resCb.send();
-  /*
-    deleteUser(req.query)
-      .then(function (data) {
-        return deleteSessionTopics(req.query);
-      })
-      .done(function (data) {
-          resCb.send();
-      }, errCb);
-*/
 };

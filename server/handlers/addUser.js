@@ -1,7 +1,8 @@
 "use strict";
-var AddUsers = require('if-data').repositories.AddUsers;
+var AddUsers = require('if-data').repositories.addUsers;
 var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
+var mtypes = require('if-common').mtypes;
 
 module.exports.validate = function (req, res, next) {
 
@@ -41,6 +42,7 @@ module.exports.validate = function (req, res, next) {
 module.exports.run = function (req, resCb, errCb) {
     
     var fields = {
+        users: [{
         name_first: req.body.name_first,
         name_last: req.body.name_last,
         gender: req.body.gender,
@@ -52,16 +54,13 @@ module.exports.run = function (req, resCb, errCb) {
         country_id: req.body.country_id,
         city: req.body.city,
         code: req.body.code,
-        company: req.body.company
-    };
+        company: req.body.company,
+        accountId: req.locals.accountId,
+        status: mtypes.userStatus.inactive
+    }]};
 
-    resCb.send();
-
-    AddUsers(fields)
-        .done(function (data) {
-            resCb.send(data);
-        }, function (err) {
-            errCb(webFaultHelper.getFault(err));
-        });
- 
+    AddUsers(fields, function(err, data){
+        if(err!==null ) return errCb(webFaultHelper.getFault(err));
+        resCb.send();
+    });
 };

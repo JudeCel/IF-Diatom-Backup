@@ -17,20 +17,24 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-
+    var copySessionId = 0;
+    var topics = []
     getSessionAndTopics(req.query)
         .then(function (data) {
             data.session.name = data.session.name +"_Copy";
             data.session.accountId = req.locals.accountId;
+            topics = data.topics;
             return createSession(data.session);
         })
         .then(function (sessionCopy) {
+            copySessionId = sessionCopy.id;
             _.each(topics, function(topic) {
                 topic.session_id = sessionCopy.id;
             });
             return createTopic(topics);
         })
-        .done(function (result) {          
-            resCb.send();
+        .done(function (result) {    
+            console.log({id: copySessionId});      
+            resCb.send({id: copySessionId});
         }, errCb);  
 };

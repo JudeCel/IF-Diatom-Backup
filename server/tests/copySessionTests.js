@@ -6,6 +6,7 @@ var expressValidatorStub = require('./testHelpers/expressValidatorStub.js');
 var testUtils = ifTestHelpers.utils;
 var mtypes = require('if-common').mtypes;
 var util = require('util');
+var getSessionAndTopics = require('if-data').repositories.getSessionAndTopics;
 
 test("Connects to the db", commonOperations.dbConnect);
 
@@ -15,8 +16,8 @@ test('copySessionTests', function (t) {
     var sessionCopyId1 = 0;
     var sessionCopyId2 = 0;
     var sessionCopyId3 = 0;    
-    var topics = [];
     var session = {};
+    var topics = [];
 
     t.test("Creates predefined data sets", function (t) {
         ifTestHelpers.user.createAccount()
@@ -54,11 +55,20 @@ test('copySessionTests', function (t) {
         };
 
         var resCb = function (data) {
+            sessionCopyId1 = data.id; 
             t.ok(data, "Session copy created");
-            t.notEqual(session.name, data.session.name, "Session name ok");
-            t.equals(topics.length, data.topics.length, "Topics count is correct");
+                getSessionAndTopics(data.id)
+                .done(function (data) {
 
-            sessionCopyId1 = data.session.id; 
+                  t.notEqual(session.name, data.session.name, "Session name ok");
+                  t.equals(topics.length, data.topics.length, "Topics count is correct");
+                  t.end();
+                }, function (err) {
+                  t.fail(err);
+                  t.end();
+                });
+
+            
             t.end();
         };
         var nextCb = function (err) {
@@ -73,9 +83,7 @@ test('copySessionTests', function (t) {
         var params = {};
         var resCb = function (data) {
             t.notOk(data, "Session copy created");
-            t.notEqual(session.name, data.session.name, "Session name ok");
-            t.equals(topics.length, data.topics.length, "Topics count is correct");
-            sessionCopyId2 = data.session.id; 
+            sessionCopyId2 = data.id; 
             t.end();
         };
         var nextCb = function (err) {
@@ -96,11 +104,17 @@ test('copySessionTests', function (t) {
             locals: {accountId: accountId}
         };
         var resCb = function (data) {
+            sessionCopyId3 = data.id;
             t.ok(data, "Session copy created");
-            sessionCopyId3 = data.session.id;
 
-            t.equals(topics.length, data.topics.length, "Topics count is correct");
-            t.end();
+            getSessionAndTopics(data.id)
+                .done(function (data) {
+                  t.equals(topics.length, data.topics.length, "Topics count is correct");
+                  t.end();
+                }, function (err) {
+                  t.fail(err);
+                  t.end();
+                });
         };
         var nextCb = function (err) {
             t.notOk(err, "No errors should have been thrown, received: " + util.inspect(err));

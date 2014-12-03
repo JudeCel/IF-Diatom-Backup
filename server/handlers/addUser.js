@@ -7,16 +7,16 @@ var mtypes = require('if-common').mtypes;
 module.exports.validate = function (req, res, next) {
 
     var params = {
-        name_first: req.param("name_first"),
-        name_last: req.param("name_last"),
-        gender: req.param("gender"),
-        email: req.param("email"),
-        address: req.param("address"),
-        state:  req.param("state"),
-        country_id: req.param("country_id"),
-        city: req.param("city"),
-        code: req.param("code"),
-        company: req.param("company")
+        name_first: req.body.name_first,
+        name_last: req.body.name_last,
+        gender: req.body.gender,
+        email: req.body.email,
+        address: req.body.address,
+        state: req.body.state,
+        country_id: req.body.country_id,
+        city: req.body.city,
+        code: req.body.code,
+        company: req.body.company
     };
 
     var err = joi.validate(params, {
@@ -61,6 +61,6 @@ module.exports.run = function (req, resCb, errCb) {
 
     AddUsers(fields, function(err, data){
         if(err!==null ) return errCb(webFaultHelper.getFault(err));
-        resCb.send();
+        resCb.send({id:data[0].id});
     });
 };

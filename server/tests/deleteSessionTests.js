@@ -4,14 +4,14 @@ var test = require('tap').test;
 var expressValidatorStub = require('./testHelpers/expressValidatorStub.js');
 var ifTestHelpers = require('if-test-helpers');
 var testUtils = ifTestHelpers.utils;
+var _ = require('lodash');
+var getSessionAndTopics = require('if-data').repositories.getSessionAndTopics;
 
 test("Connects to the db", commonOperations.dbConnect);
 
 test('Delete session', function (t) {
   var accountId = 0;
   var sessionId = 0;
-  var session = {};
-  var topics = [];
 
   t.test("Creates predefined data sets", function (t) {
 	  ifTestHelpers.user.createAccount()
@@ -34,7 +34,6 @@ test('Delete session', function (t) {
 	      })
 	      .done(function (info) {
 	        t.ok(info, 'Topic created');
-	        topics.push(info);
 	        t.end();
 	      }, function (err) {
 	        t.fail(err);
@@ -49,12 +48,15 @@ test('Delete session', function (t) {
     };
 
 		var resCb = function (data) {
-			t.ok(data, "Result returned");
-      t.equal(data.session.affectedRows, 1, "Session Row affected");
-      t.equal(data.session.changedRows, 1, "Session Row changed");
-      t.equal(data.topics.affectedRows, 1, "Topic Row affected");
-      t.equal(data.topics.changedRows, 1, "Topic Row changed");      
-			t.end();
+      getSessionAndTopics(params.query)
+        .done(function (data) {
+          t.notEqual(data.session.deleted, null, "Session deleted ok");
+          t.equal(data.topics.length, 0, "Topics deleted ok");
+          t.end();
+        }, function (err) {
+          t.fail(err);
+          t.end();
+      });
 		};
 
 		var nextCb = function (data) {

@@ -300,6 +300,8 @@ module.exports = {
         app.get("/insiderfocus-api/getSessions", accountManager('getSessions'));
 	    app.post("/insiderfocus-api/createSession", accountManager('createSession'));
 
+        app.get("/insiderfocus-api/getSession/:sessionId", accountManager('getSession'));
+
 	    app.get('/insiderfocus-api/contactLists', accountManager('getContactLists'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
     },

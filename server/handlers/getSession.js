@@ -10,7 +10,7 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-	getSession(req.params)
+	getSession(req.query)
         .done(function (data) {
             resCb.send(data);
         }, function (err) {

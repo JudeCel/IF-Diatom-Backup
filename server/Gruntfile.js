@@ -40,9 +40,7 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'tests': [
-						'<%= conf("deploy_dir") %>/tests/createSession' +
-                            '' +
-                            'mTests.js',
+                        '<%= conf("deploy_dir") %>/tests/**/*.js',
 						'!<%= conf("deploy_dir") %>/tests/testHelpers/**/*'
 					]
 				}

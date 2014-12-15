@@ -15,10 +15,10 @@ module.exports.io = function () {
 module.exports.listen = function (server) {
     var socketHelper = require('./socketHelper.js');
 
-    io = socketio.listen(server);
-    io.configure(function () {
-        io.set('log level', 0);		//	right now we want error only...
-    });
+    io = socketio(server);
+    //io.configure(function () {
+    //    io.set('log level', 0);		//	right now we want error only...
+    //});
 
     var userids = [];
     var nameList = new Array();

@@ -15,3 +15,12 @@ module.exports.getResourceFileName = function (initialFileName) {
 
     return filename + "_" + (date * 1) + '.' + ext;
 }
+
+module.exports.splitExtensionHelper = function (name) {
+    var nameWithoutExt = name.replace(/(\.\w+$)/igm, "");
+    var ext = name.slice(nameWithoutExt.length);
+    return {
+        name: nameWithoutExt,
+        ext: ext
+    }
+};

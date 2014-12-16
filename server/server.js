@@ -28,7 +28,6 @@ module.exports = {
 	    app.use(require('./helpers/headers/corsResponse.js'));
 	    app.use(log4js.connectLogger(stdLogger, {level: log4js.levels.INFO, format: 'express>>:remote-addr|:response-time|:method|:url|:http-version|:status|:referrer|:user-agent'}));
 
-        // FIXME: Do we need bodyParser? It is deprecated and conflicts with fileuploader (mir4a at 15:35, 12/9/14)
         app.use(bodyParser.json());       // to support JSON-encoded bodies
         app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 

@@ -6,20 +6,7 @@ var mtypes = require('if-common').mtypes;
 
 module.exports.validate = function (req, res, next) {
 
-    var params = {
-        name_first: req.body.name_first,
-        name_last: req.body.name_last,
-        gender: req.body.gender,
-        email: req.body.email,
-        address: req.body.address,
-        state: req.body.state,
-        country_id: req.body.country_id,
-        city: req.body.city,
-        code: req.body.code,
-        company: req.body.company
-    };
-
-    var err = joi.validate(params, {
+    var err = joi.validate(req.body, {
         name_first: joi.types.String().required(),
         name_last: joi.types.String().required(),
         gender: joi.types.String().required(),

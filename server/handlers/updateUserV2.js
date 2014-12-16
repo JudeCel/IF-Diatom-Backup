@@ -5,21 +5,7 @@ var webFaultHelper = require('../helpers/webFaultHelper.js');
 
 module.exports.validate = function (req, res, next) {
 
-    var params = {
-        id: req.param("id"),
-        name_first: req.param("name_first"),
-        name_last: req.param("name_last"),
-        gender: req.param("gender"),
-        email: req.param("email"),
-        address: req.param("address"),
-        state:  req.param("state"),
-        country_id: req.param("country_id"),
-        city: req.param("city"),
-        code: req.param("code"),
-        company: req.param("company")
-    };
-
-    var err = joi.validate(params, {
+    var err = joi.validate(req.body, {
         id: joi.types.Number().required(),
         name_first: joi.types.String().required(),
         name_last: joi.types.String().required(),

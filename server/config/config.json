@@ -12,10 +12,11 @@
 		"adminPath": "admin/",
 		"chatRoomPath": "chat_room/",
         "convertPath": "C:/Program Files/ImageMagick-6.8.9-Q16/convert",
-        "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify"
+        "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify",
+        "uploadsPath": "uploads/"
 	},
 	"mysql": {
-		"host": "dev01",
+		"host": "192.168.10.40",
 		"port": 3306,
 		"user": "ifuser",
 		"password": "aaa",

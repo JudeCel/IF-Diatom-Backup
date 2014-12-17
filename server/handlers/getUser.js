@@ -2,6 +2,7 @@
 var getUser = require('if-data').repositories.getUser;
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 var joi = require('joi');
+var _ = require('lodash');
 
 module.exports.validate = function (req, res, next) {
     //if (req.locals.userId == undefined)
@@ -16,7 +17,11 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-   // getUser(req.locals)
+
+    //{TODO} - need fix it! (problem with $rootScope.userId on frontend)
+    if(!parseInt(req.query.userId))  
+      _.extend(req.query, {userId: req.locals.userId});
+    // getUser(req.locals)
     getUser(req.query)
         .done(function (data) {
             resCb.send(data);

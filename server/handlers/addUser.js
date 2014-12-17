@@ -3,6 +3,7 @@ var AddUsers = require('if-data').repositories.addUsers;
 var joi = require('joi');
 var webFaultHelper = require('../helpers/webFaultHelper.js');
 var mtypes = require('if-common').mtypes;
+var _ = require('lodash');
 
 module.exports.validate = function (req, res, next) {
 
@@ -28,11 +29,10 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-    var fields = {users: [req.body]};
-        fields.users[0].accountId = req.locals.accountId;
-        fields.users[0].status = mtypes.userStatus.inactive;
-
-    AddUsers(fields, function(err, data){
+    
+    _.extend(req.body, {accountId: req.locals.accountId, status: mtypes.userStatus.inactive});
+    
+    AddUsers({users: [req.body]}, function(err, data){
         if(err!==null ) return errCb(webFaultHelper.getFault(err));
         resCb.send({id:data[0].id});
     });

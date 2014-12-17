@@ -11,14 +11,14 @@ module.exports.validate = function (req, res, next) {
         name_last: joi.types.String().required(),
         gender: joi.types.String().required(),
         email: joi.types.String().email().required(),
-        address: joi.types.String().optional().allow('').nullOk(),
-        phone: joi.types.String().optional().allow('').nullOk(),
-        mobile: joi.types.String().optional().allow('').nullOk(),
-        state:  joi.types.String().optional().allow('').nullOk(),
+        address: joi.types.String().optional().allow(null, ''),
+        phone: joi.types.String().optional().allow(null, ''),
+        mobile: joi.types.String().optional().allow(null, ''),
+        state:  joi.types.String().optional().allow(null, ''),
         country_id: joi.types.Number().optional().nullOk(),
-        city: joi.types.String().optional().allow('').nullOk(),
-        code: joi.types.String().optional().allow('').nullOk(),
-        company: joi.types.String().optional().allow('').nullOk()
+        city: joi.types.String().optional().allow(null, ''),
+        code: joi.types.String().optional().allow(null, ''),
+        company: joi.types.String().optional().allow(null, '')
     });
     if (err)
         return next(webFaultHelper.getValidationFault(err.message));
@@ -27,27 +27,11 @@ module.exports.validate = function (req, res, next) {
 };
 
 module.exports.run = function (req, resCb, errCb) {
-    
-    var fields = {
-        id: req.body.id,
-        name_first: req.body.name_first,
-        name_last: req.body.name_last,
-        gender: req.body.gender,
-        email: req.body.email,
-        address: req.body.address,
-        phone: req.body.phone,
-        mobile: req.body.mobile,
-        state: req.body.state,
-        country_id: req.body.country_id,
-        city: req.body.city,
-        code: req.body.code,
-        company: req.body.company
-    };
-    updateUser(fields)
+    updateUser(req.body)
         .done(function (opResult) {
             resCb.send({
                 opResult: opResult,
-                fields: fields
+                fields: req.body
             });
         }, function (err) {
             errCb(webFaultHelper.getFault(err));

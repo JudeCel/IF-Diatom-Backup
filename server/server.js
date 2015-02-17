@@ -20,6 +20,7 @@ module.exports = {
 	    var everyone = handlerInterceptor.handle;
 
         directoryHelper.directoryCheck(config.paths.uploadsPath, function(res) {return res;}); // FIXME: What kind of callback should be here if directory helper requred for callback? (mir4a at 11:10, 12/12/14)
+        directoryHelper.directoryCheck(config.paths.temporaryPath, function(res) {return res;}); // FIXME: What kind of callback should be here if directory helper requred for callback? (mir4a at 11:10, 12/12/14)
 
         var app = express();
 	    app.use(express.compress());
@@ -27,6 +28,8 @@ module.exports = {
 	    app.use(require('./helpers/headers/noCacheHeaders.js'));
 	    app.use(require('./helpers/headers/corsResponse.js'));
 	    app.use(log4js.connectLogger(stdLogger, {level: log4js.levels.INFO, format: 'express>>:remote-addr|:response-time|:method|:url|:http-version|:status|:referrer|:user-agent'}));
+        app.use(bodyParser.json());       // to support JSON-encoded bodies
+        app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
         app.use(bodyParser.json());       // to support JSON-encoded bodies
         app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
@@ -38,9 +41,10 @@ module.exports = {
 	    server = app.listen(config.port);
         var io = require('./sockets.js').listen(server);
 
-        io.configure(function () {
-            io.set('log level', 0);		//	0(error), 1(warn), 2(info), 3(debug)
-        });
+        // TODO: Implement other logging for socket.io (previous was removed from new version)
+        //io.configure(function ()
+        //    io.set('log level', 2);		//	0(error), 1(warn), 2(info), 3(debug)
+        //});
 
         socketHelper.dbHelper.dbHandleDisconnect();
 
@@ -312,6 +316,27 @@ module.exports = {
 	    app.get('/insiderfocus-api/contactLists', accountManager('getContactLists'));
         //console.log('Listening for HTTP requests on port ' + app.get('port'));
 	    app.post('/insiderfocus-api/uploadImage', accountManager('uploadImage'));
+
+        app.use('/uploads', express.static(__dirname + '/' + config.paths.uploadsPath));
+
+        app.use(function(req, res, next){
+            res.status(404);
+
+            // respond with html page
+            if (req.accepts('html')) {
+                res.render('404', { url: req.url });
+                return;
+            }
+
+            // respond with json
+            if (req.accepts('json')) {
+                res.send({ error: 'Not found' });
+                return;
+            }
+
+            // default to plain-text. send()
+            res.type('txt').send('Not found');
+        });
     },
 
     close: function () {

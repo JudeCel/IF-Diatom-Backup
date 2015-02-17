@@ -5,6 +5,7 @@
 	"port": "7777",
 	"domain": "localhost",
 	"paths": {
+        "temporaryPath": "tmp/",
 		"fsPath": "C:/InsiderFocus/if-diatom-backup/",
 		"urlPath": "localhost:7778/",
 		"serverPath": "server/",
@@ -15,6 +16,19 @@
         "identifyPath": "C:/Program Files/ImageMagick-6.8.9-Q16/identify",
         "uploadsPath": "uploads/"
 	},
+    "images": {
+        "resizeOptions": {
+            "width":300,
+            "height": null,
+            "resizeStyle": "aspectfit",
+            "gravity": "Center",
+            "density": null,
+            "strip": true,
+            "quality": 51
+        },
+        "maxSize": 20,
+        "thumbAppendix": "_thumb"
+    },
 	"mysql": {
 		"host": "192.168.10.40",
 		"port": 3306,

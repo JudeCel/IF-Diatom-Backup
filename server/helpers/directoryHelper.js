@@ -13,6 +13,8 @@ module.exports.directoryCheck = function(path, cb) {
                 }
             });
         }
-        return cb();
+        if (typeof(cb) == "function") return cb()
+        else return
+
     });
 };

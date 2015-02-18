@@ -8,7 +8,7 @@ var config = require('simpler-config');
 var formidable = require('formidable');
 var util = require('util');
 var fs = require('fs');
-var imagemagick = require('imagemagick-native');
+var imagemagick = require('imagemagick');
 var io = require('../sockets').io;
 
 module.exports.validate = function (req, res, next) {
@@ -113,20 +113,14 @@ module.exports.run = function (req, res, next) {
             form.on('end', function () {
                 io().sockets.emit('file:converting', {msg: 'File uploaded, start resizing…'});
 
-                var readStream = fs.createReadStream(fileHelper.srcPath(form));
-                var writeStream = fs.createWriteStream(fileHelper.tmpFile(form));
-
-                writeStream
-                    .on('finish', function(){
-                        fs.rename(fileHelper.tmpFile(form), fileHelper.outputFile(form), function(err) {
-                            if (err) throw err;
-                            io().sockets.emit('file:ready',{msg: 'File ready!', filePath: fileHelper.outputFile(form)});
-                        })
-                    });
-
-                readStream
-                    .pipe(imagemagick.streams.convert(config.images.resizeOptions))
-                    .pipe(writeStream);
+                imagemagick.resize({
+                    srcPath: fileHelper.srcPath(form),
+                    dstPath: fileHelper.outputFile(form),
+                    width:   config.images.resizeOptions.width
+                }, function(err){
+                    if (err) throw err;
+                    io().sockets.emit('file:ready',{msg: 'File ready!', filePath: fileHelper.outputFile(form)});
+                });
 
             });
 

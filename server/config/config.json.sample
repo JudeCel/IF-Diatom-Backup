@@ -7,7 +7,7 @@
 	"paths": {
         "temporaryPath": "tmp/",
 		"fsPath": "C:/InsiderFocus/if-diatom-backup/",
-		"urlPath": "localhost:7778/",
+		"urlPath": "http://localhost:7778/",
 		"serverPath": "server/",
 		"configPath": "config/",
 		"adminPath": "admin/",

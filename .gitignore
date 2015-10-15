@@ -1,2 +1,4 @@
 # Created by .gitignore support plugin (hsz.mobi)
 server/node_modules/
+/server/npm-debug.log
+/server/config/config.json

@@ -37,6 +37,9 @@ module.exports = {
 	    app.use(app.router);
 
 	    app.use(require('./helpers/errorHandler.js'));
+      // app.use('/chat_room', express.static(__dirname + './../chat_room'));
+      // app.use('/server/onsocket', express.static(__dirname + '/onsocket'));
+      // app.use('/server/bootstrap', express.static(__dirname + '/bootstrap'));
 
 	    server = app.listen(config.port);
         var io = require('./sockets.js').listen(server);
